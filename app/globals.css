@@ -1,15 +1,23 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-primary: #0b2d4e;
-  --color-accent: #c8922a;
-  --color-section-alt: #f4f8fb;
-  --color-border: #c8d8e4;
-  --color-body: #374151;
-  --font-sans: var(--font-inter);
-  --radius-card: 8px;
-  --radius-sm: 8px;
-  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.08), 0 4px 16px rgba(0, 0, 0, 0.06);
+  --color-ink: #0f2420;
+  --color-ink-soft: #1a3833;
+  --color-sea: #1f5c54;
+  --color-flare: #e07050;
+  --color-flare-deep: #c45a3c;
+  --color-mist: #e8eeec;
+  --color-paper: #f7f8f6;
+  --color-border: #b8c9c4;
+  --color-body: #3a4542;
+  --color-primary: #0f2420;
+  --color-accent: #e07050;
+  --color-section-alt: #e8eeec;
+  --font-sans: var(--font-figtree);
+  --font-display: var(--font-newsreader);
+  --radius-card: 2px;
+  --radius-sm: 2px;
+  --shadow-card: 0 1px 0 rgba(15, 36, 32, 0.06);
   --breakpoint-xs: 375px;
 }
 
@@ -19,9 +27,9 @@ html {
 }
 
 body {
-  background: #ffffff;
-  color: #374151;
-  font-family: var(--font-inter), system-ui, sans-serif;
+  background: var(--color-paper);
+  color: var(--color-body);
+  font-family: var(--font-figtree), system-ui, sans-serif;
   overflow-x: hidden;
   min-width: 320px;
 }
@@ -29,6 +37,26 @@ body {
 main,
 section {
   min-width: 0;
+}
+
+.font-display {
+  font-family: var(--font-newsreader), Georgia, "Times New Roman", serif;
+}
+
+/* Soft Somali textile lattice — custom, not stock */
+.pattern-lattice {
+  background-color: var(--color-mist);
+  background-image:
+    linear-gradient(135deg, rgba(31, 92, 84, 0.07) 1px, transparent 1px),
+    linear-gradient(45deg, rgba(224, 112, 80, 0.06) 1px, transparent 1px);
+  background-size: 28px 28px, 28px 28px;
+}
+
+.pattern-ink {
+  background-color: var(--color-ink);
+  background-image:
+    radial-gradient(ellipse 80% 50% at 100% 0%, rgba(31, 92, 84, 0.55), transparent 55%),
+    radial-gradient(ellipse 60% 40% at 0% 100%, rgba(224, 112, 80, 0.18), transparent 50%);
 }
 
 @keyframes slideUp {
@@ -49,6 +77,43 @@ section {
   to {
     opacity: 1;
   }
+}
+
+@keyframes riseIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes drawRule {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.animate-rise {
+  animation: riseIn 0.7s ease-out both;
+}
+
+.animate-rise-delay {
+  animation: riseIn 0.8s ease-out 0.12s both;
+}
+
+.animate-rise-delay-2 {
+  animation: riseIn 0.85s ease-out 0.24s both;
+}
+
+.rule-draw {
+  transform-origin: left center;
+  animation: drawRule 0.9s ease-out 0.2s both;
 }
 
 .table-scroll {
@@ -86,4 +151,9 @@ svg {
 
 #mobile-nav-toggle:checked ~ .header-bar .icon-close {
   display: block;
+}
+
+/* Folio dropdown panel */
+.folio-panel {
+  box-shadow: 8px 12px 0 rgba(15, 36, 32, 0.06);
 }

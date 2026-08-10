@@ -70,28 +70,28 @@ export default function HowToInstructPage() {
         subtitle="Eight steps for UK immigration solicitors, with Scottish Legal Aid (SLAB) and England/Wales (LAA) funding routes."
         breadcrumbs={crumbs}
       >
-        <p className="mb-8 max-w-3xl text-[#374151] leading-relaxed">{SITE_SCOPE}</p>
+        <p className="mb-8 max-w-3xl text-[#3A4542] leading-relaxed">{SITE_SCOPE}</p>
 
         <div className="space-y-6">
           {steps.map((s) => (
-            <div key={s.n} className="flex gap-4 rounded-[8px] border border-[#C8D8E4] bg-white p-4 sm:p-6">
-              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#0B2D4E] font-bold text-white">
+            <div key={s.n} className="flex gap-4 rounded-[8px] border border-[#B8C9C4] bg-white p-4 sm:p-6">
+              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#0F2420] font-bold text-white">
                 {s.n}
               </span>
               <div className="min-w-0">
-                <h2 className="break-words font-bold text-[#0B2D4E]">{s.title}</h2>
-                <p className="prose-safe mt-2 text-sm text-[#374151] sm:text-base">{s.body}</p>
+                <h2 className="break-words font-bold text-[#0F2420]">{s.title}</h2>
+                <p className="prose-safe mt-2 text-sm text-[#3A4542] sm:text-base">{s.body}</p>
               </div>
             </div>
           ))}
         </div>
 
-        <div className="mt-10 rounded-[8px] border border-[#C8D8E4] bg-[#F4F8FB] p-4 sm:p-6">
-          <h2 className="text-lg font-bold text-[#0B2D4E]">Legal Aid summary: Scotland and England/Wales</h2>
-          <h3 className="mt-4 font-semibold text-[#0B2D4E]">Scotland (SLAB)</h3>
-          <p className="prose-safe mt-2 text-sm text-[#374151] sm:text-base">{LEGAL_AID_SCOTLAND_SUMMARY}</p>
-          <h3 className="mt-4 font-semibold text-[#0B2D4E]">England and Wales (LAA)</h3>
-          <p className="prose-safe mt-2 text-sm text-[#374151] sm:text-base">{LEGAL_AID_ENGLAND_WALES_SUMMARY}</p>
+        <div className="mt-10 rounded-[8px] border border-[#B8C9C4] bg-[#E8EEEC] p-4 sm:p-6">
+          <h2 className="text-lg font-bold text-[#0F2420]">Legal Aid summary: Scotland and England/Wales</h2>
+          <h3 className="mt-4 font-semibold text-[#0F2420]">Scotland (SLAB)</h3>
+          <p className="prose-safe mt-2 text-sm text-[#3A4542] sm:text-base">{LEGAL_AID_SCOTLAND_SUMMARY}</p>
+          <h3 className="mt-4 font-semibold text-[#0F2420]">England and Wales (LAA)</h3>
+          <p className="prose-safe mt-2 text-sm text-[#3A4542] sm:text-base">{LEGAL_AID_ENGLAND_WALES_SUMMARY}</p>
         </div>
 
         <RelatedLinks
@@ -103,7 +103,7 @@ export default function HowToInstructPage() {
         />
         <Link
           href="/contact"
-          className="mt-8 inline-flex min-h-[44px] items-center rounded-[8px] bg-[#C8922A] px-6 py-3 font-semibold text-white"
+          className="mt-8 inline-flex min-h-[44px] items-center rounded-[8px] bg-[#E07050] px-6 py-3 font-semibold text-white"
         >
           Contact Us
         </Link>

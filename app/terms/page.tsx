@@ -12,17 +12,17 @@ export const metadata = createMetadata({
 export default function TermsPage() {
   return (
     <PageShell title="Terms of Use" breadcrumbs={[{ label: "Home", href: "/" }, { label: "Terms" }]}>
-      <p className="text-[#374151] leading-relaxed">
+      <p className="text-[#3A4542] leading-relaxed">
         SomaliaExpert.com is an expert witness matching service for UK immigration solicitors acting in First-tier
         Tribunal and Upper Tribunal proceedings in England, Wales, Scotland, and Northern Ireland. We are not a law
         firm and do not provide legal advice. Expert witnesses instructed through this service provide independent
         evidence to tribunals; their duty is to the tribunal, not to either party.
       </p>
-      <p className="mt-4 text-[#374151] leading-relaxed">
+      <p className="mt-4 text-[#3A4542] leading-relaxed">
         This service is available only within the United Kingdom. We do not accept instructions from practitioners
         outside UK immigration and asylum tribunal jurisdiction.
       </p>
-      <p className="mt-4 text-[#374151] leading-relaxed">
+      <p className="mt-4 text-[#3A4542] leading-relaxed">
         By using this website you agree to use it for legitimate instruction enquiries only. We reserve the right to
         decline instructions that fall outside our scope or expertise. Content on this site is for general information
         and does not constitute legal advice.

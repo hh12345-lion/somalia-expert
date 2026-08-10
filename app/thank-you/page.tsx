@@ -12,13 +12,13 @@ export const metadata = createMetadata({
 export default function ThankYouPage() {
   return (
     <>
-      <section className="bg-[#0B2D4E] py-16 md:py-24">
+      <section className="bg-[#0F2420] py-16 md:py-24">
         <div className="mx-auto max-w-2xl px-4 text-center sm:px-6">
           <div
-            className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-[#C8922A]/20"
+            className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-[#E07050]/20"
             aria-hidden="true"
           >
-            <svg className="h-8 w-8 text-[#C8922A]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg className="h-8 w-8 text-[#E07050]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
             </svg>
           </div>
@@ -32,7 +32,7 @@ export default function ThankYouPage() {
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link
               href="/"
-              className="inline-flex min-h-[44px] min-w-[200px] items-center justify-center rounded-[8px] bg-[#C8922A] px-8 py-3 font-semibold text-white transition hover:bg-[#b07f22]"
+              className="inline-flex min-h-[44px] min-w-[200px] items-center justify-center rounded-[8px] bg-[#E07050] px-8 py-3 font-semibold text-white transition hover:bg-[#C45A3C]"
             >
               Return to Homepage
             </Link>
@@ -46,9 +46,9 @@ export default function ThankYouPage() {
         </div>
       </section>
 
-      <section className="bg-[#F4F8FB] py-12">
-        <div className="mx-auto max-w-2xl px-4 text-center text-[#374151] sm:px-6">
-          <h2 className="text-lg font-semibold text-[#0B2D4E]">What happens next?</h2>
+      <section className="bg-[#E8EEEC] py-12">
+        <div className="mx-auto max-w-2xl px-4 text-center text-[#3A4542] sm:px-6">
+          <h2 className="text-lg font-semibold text-[#0F2420]">What happens next?</h2>
           <ul className="mt-4 space-y-3 text-left text-sm leading-relaxed">
             <li>We review your case details and match you with a qualified Somalia expert witness.</li>
             <li>You receive a response within one business day with proposed scope and timeline.</li>
@@ -56,7 +56,7 @@ export default function ThankYouPage() {
           </ul>
           <Link
             href="/how-to-instruct"
-            className="mt-6 inline-flex min-h-[44px] items-center font-semibold text-[#C8922A] hover:underline"
+            className="mt-6 inline-flex min-h-[44px] items-center font-semibold text-[#E07050] hover:underline"
           >
             How to instruct a Somalia expert witness
           </Link>

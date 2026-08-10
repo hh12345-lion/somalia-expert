@@ -17,11 +17,13 @@ export const LEGAL_AID_ENGLAND_WALES_SUMMARY =
   "In England and Wales, Legal Aid Agency (LAA) prior authority is required for most expert witness disbursements in asylum proceedings, unless a valid exception applies. Solicitors should confirm funding before issuing a letter of instruction.";
 
 export const COLORS = {
-  primary: "#0B2D4E",
-  accent: "#C8922A",
-  background: "#FFFFFF",
-  sectionAlt: "#F4F8FB",
-  border: "#C8D8E4",
-  heading: "#0B2D4E",
-  body: "#374151",
+  primary: "#0F2420",
+  accent: "#E07050",
+  background: "#F7F8F6",
+  sectionAlt: "#E8EEEC",
+  border: "#B8C9C4",
+  heading: "#0F2420",
+  body: "#3A4542",
+  sea: "#1F5C54",
+  flareDeep: "#C45A3C",
 } as const;

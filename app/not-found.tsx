@@ -2,9 +2,9 @@ import Link from "next/link";
 
 export default function NotFound() {
   return (
-    <section className="bg-[#0B2D4E] py-14 text-center md:py-20">
+    <section className="bg-[#0F2420] py-14 text-center md:py-20">
       <div className="mx-auto max-w-3xl px-4 sm:px-6">
-        <p className="text-7xl font-bold text-[#C8922A] sm:text-8xl" aria-hidden="true">
+        <p className="text-7xl font-bold text-[#E07050] sm:text-8xl" aria-hidden="true">
           404
         </p>
         <h1 className="mt-4 text-3xl font-bold text-white sm:text-4xl">Page Not Found</h1>
@@ -15,7 +15,7 @@ export default function NotFound() {
         <div className="mt-10 flex w-full max-w-md flex-col items-stretch gap-3 sm:mx-auto sm:max-w-none sm:flex-row sm:items-center sm:justify-center sm:gap-4">
           <Link
             href="/"
-            className="inline-flex min-h-[44px] w-full items-center justify-center rounded-[8px] bg-[#C8922A] px-6 py-3 font-semibold text-white transition hover:bg-[#b07f22] sm:w-auto sm:min-w-[200px] sm:px-8"
+            className="inline-flex min-h-[44px] w-full items-center justify-center rounded-[8px] bg-[#E07050] px-6 py-3 font-semibold text-white transition hover:bg-[#C45A3C] sm:w-auto sm:min-w-[200px] sm:px-8"
           >
             Return to Homepage
           </Link>

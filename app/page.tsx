@@ -1,16 +1,14 @@
+import Image from "next/image";
 import Link from "next/link";
 import { CTASection } from "@/components/ui/CTASection";
-import { CardGrid } from "@/components/ui/CardGrid";
 import { JsonLd } from "@/components/ui/JsonLd";
 import { homepageGraph, websiteSchema } from "@/lib/schema";
 import { asylumProfiles } from "@/data/asylum-profiles";
-import { services } from "@/data/services";
 import { caseTypes } from "@/data/case-types";
 import { regions } from "@/data/regions";
 import {
   LEGAL_AID_ENGLAND_WALES_SUMMARY,
   LEGAL_AID_SCOTLAND_SUMMARY,
-  SITE_SCOPE,
 } from "@/lib/constants";
 
 const featuredProfileSlugs = [
@@ -28,206 +26,258 @@ export default function HomePage() {
   return (
     <>
       <JsonLd data={[homepageGraph(), websiteSchema()]} />
-      <section className="bg-[#0B2D4E] py-14 md:py-20">
-        <div className="mx-auto min-w-0 max-w-6xl px-4 sm:px-6 lg:px-8">
-          <p className="text-xs font-medium uppercase tracking-wide text-[#C8922A] sm:text-sm">
-            UK Immigration & Asylum Tribunals
+
+      {/* Hero — brand first, one composition, full-bleed coast image */}
+      <section className="relative min-h-[min(88vh,760px)] overflow-hidden">
+        <Image
+          src="/images/hero-coast.jpg"
+          alt=""
+          fill
+          priority
+          className="object-cover object-center"
+          sizes="100vw"
+        />
+        <div
+          className="absolute inset-0 bg-gradient-to-r from-[#0F2420]/92 via-[#0F2420]/78 to-[#0F2420]/35"
+          aria-hidden
+        />
+        <div className="relative mx-auto flex min-h-[min(88vh,760px)] max-w-7xl flex-col justify-end px-4 pb-14 pt-24 sm:px-6 sm:pb-16 lg:px-8 lg:pb-20">
+          <p className="animate-rise font-display text-5xl tracking-tight text-white sm:text-6xl md:text-7xl lg:text-8xl">
+            SomaliaExpert
           </p>
-          <h1 className="mt-4 max-w-4xl break-words text-2xl font-bold text-white min-[375px]:text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
-            Somalia Expert Witness UK: Country Reports for Asylum & Immigration Tribunals
+          <div className="rule-draw mt-5 h-0.5 w-24 bg-[#E07050]" aria-hidden />
+          <h1 className="animate-rise-delay font-display mt-6 max-w-2xl text-2xl font-medium leading-snug text-white sm:text-3xl md:text-4xl">
+            Country expert evidence for Somali asylum appeals in UK tribunals
           </h1>
-          <p className="mt-6 max-w-2xl text-base text-white/80 sm:text-lg">
-            SomaliaExpert connects UK immigration solicitors, law firms, and Legal Aid practitioners with qualified
-            Somalia country expert witnesses for First-tier Tribunal and Upper Tribunal asylum appeals in England,
-            Wales, Scotland, and Northern Ireland.
+          <p className="animate-rise-delay-2 mt-4 max-w-xl text-base leading-relaxed text-white/75 sm:text-lg">
+            Independent reports for FTT and Upper Tribunal work — clan protection, Al-Shabaab risk, FGM, and MOJ return
+            analysis that goes beyond generic CPIN positions.
           </p>
-          <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
+          <div className="animate-rise-delay-2 mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
             <Link
               href="/contact"
-              className="inline-flex min-h-[44px] w-full items-center justify-center rounded-[8px] bg-[#C8922A] px-6 py-3 font-semibold text-white hover:bg-[#b07f22] sm:w-auto sm:px-8"
+              className="inline-flex min-h-[48px] items-center justify-center bg-[#E07050] px-7 py-3 font-semibold text-white transition hover:bg-[#C45A3C]"
             >
-              Instruct an Expert
+              Instruct an expert
             </Link>
-            <Link
-              href="/how-to-instruct"
-              className="inline-flex min-h-[44px] w-full items-center justify-center rounded-[8px] border-2 border-white px-6 py-3 text-center font-semibold text-white hover:bg-white/10 sm:w-auto sm:px-8"
-            >
-              How to Instruct
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-[#F4F8FB] py-12 sm:py-16">
-        <div className="mx-auto min-w-0 max-w-6xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-xl font-bold text-[#0B2D4E] sm:text-2xl md:text-3xl">Why Somalia Expert Evidence Matters</h2>
-          <p className="mt-4 max-w-3xl text-[#374151] leading-relaxed">
-            Somalia is one of the most complex and legally dense asylum jurisdictions in the UK system, with multiple
-            layers of country guidance, a rapidly evolving security situation, and high volumes of appeals. Home Office
-            refusals often rely on generic CPIN positions that do not reflect the appellant&apos;s specific clan profile,
-            region of origin, or personal risk factors. Independent expert evidence is essential for UK tribunals,
-            including hearings listed in Glasgow, Edinburgh, Birmingham, London, and other Immigration and Asylum
-            Chamber venues.
-          </p>
-          <p className="mt-4 max-w-3xl text-sm text-[#374151] leading-relaxed">{SITE_SCOPE}</p>
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {[
-              {
-                title: "CPR Part 35 Compliant",
-                desc: "Reports comply with Immigration Tribunal Practice Direction paragraph 10 and current expert evidence standards for asylum proceedings.",
-              },
-              {
-                title: "Current CPIN Knowledge",
-                desc: "Experts cite July 2025 Mogadishu CPINs, EUAA October 2025 country guidance, MOJ [2014], OA [2022], and 2025-2026 Al-Shabaab developments.",
-              },
-              {
-                title: "Legal Aid: Scotland (SLAB) & England/Wales (LAA)",
-                desc: "Compatible with SLAB prior approval for Scottish solicitors and LAA prior authority for England and Wales. See our instruction guide for funding routes.",
-              },
-            ].map((item) => (
-              <div key={item.title} className="rounded-[8px] border border-[#C8D8E4] bg-white p-6 shadow-[0_1px_3px_rgba(0,0,0,0.08)]">
-                <h3 className="font-semibold text-[#0B2D4E]">{item.title}</h3>
-                <p className="mt-2 text-sm text-[#374151]">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-12 sm:py-16">
-        <div className="mx-auto min-w-0 max-w-6xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-xl font-bold text-[#0B2D4E] sm:text-2xl">
-            Legal Aid in Scotland and the United Kingdom
-          </h2>
-          <p className="mt-4 max-w-3xl text-[#374151] leading-relaxed">
-            Somali asylum appeals are frequently litigated by Scottish solicitors, particularly in Glasgow and Edinburgh
-            where there is a substantial Somali diaspora. Country expert reports in those cases are commonly funded
-            through Scottish Legal Aid Board (SLAB) civil legal aid, not the Legal Aid Agency (LAA) used in England and
-            Wales. SomaliaExpert is set up for both funding routes across the UK.
-          </p>
-          <h3 className="mt-8 text-lg font-semibold text-[#0B2D4E]">Scottish Legal Aid Board (SLAB)</h3>
-          <p className="mt-3 max-w-3xl text-[#374151] leading-relaxed">{LEGAL_AID_SCOTLAND_SUMMARY}</p>
-          <p className="mt-4 max-w-3xl text-[#374151] leading-relaxed">
-            When instructing for a Scottish FTT or Upper Tribunal hearing, provide SLAB with the expert&apos;s CV,
-            proposed scope of work, estimated hours, and fee quote before the expert begins chargeable work. Include the
-            hearing date, appellant profile (clan minority, Al-Shabaab, FGM, MOJ return, etc.), and why country expert
-            evidence is necessary to the appeal. Our{" "}
-            <Link href="/how-to-instruct" className="font-semibold text-[#C8922A] hover:underline">
-              how to instruct guide
-            </Link>{" "}
-            sets out the documents SLAB and Scottish solicitors typically require.
-          </p>
-          <h3 className="mt-8 text-lg font-semibold text-[#0B2D4E]">England and Wales (LAA)</h3>
-          <p className="mt-3 max-w-3xl text-[#374151] leading-relaxed">{LEGAL_AID_ENGLAND_WALES_SUMMARY}</p>
-          <p className="mt-4 max-w-3xl text-sm text-[#374151] leading-relaxed">
-            Northern Ireland legal aid is administered separately by the Legal Services Agency Northern Ireland (LSANI).
-            Solicitors in Belfast and other NI venues should confirm prior approval under the applicable NI legal aid
-            scheme before instruction.
-          </p>
-        </div>
-      </section>
-
-      <section className="py-12 sm:py-16">
-        <div className="mx-auto min-w-0 max-w-6xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-xl font-bold text-[#0B2D4E] sm:text-2xl">Key Somali Asylum Profiles</h2>
-          <p className="mt-2 max-w-3xl text-[#374151]">
-            Expert witness pages for the highest-volume Somali asylum profiles in UK tribunals.
-          </p>
-          <div className="mt-8">
-            <CardGrid
-              items={featuredProfiles.map((p) => ({
-                title: p!.title,
-                description: p!.metaDescription.slice(0, 120) + "...",
-                href: `/asylum-profiles/${p!.slug}`,
-              }))}
-            />
-          </div>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
-            <Link href="/asylum-profiles" className="inline-flex min-h-[44px] items-center font-semibold text-[#C8922A] hover:underline">
-              View all asylum profiles
-            </Link>
-            <Link href="/moj-country-guidance" className="inline-flex min-h-[44px] items-center font-semibold text-[#C8922A] hover:underline">
-              MOJ Country Guidance
-            </Link>
-            <Link href="/regions" className="inline-flex min-h-[44px] items-center font-semibold text-[#C8922A] hover:underline">
-              Regional analysis
-            </Link>
-            <Link href="/guides" className="inline-flex min-h-[44px] items-center font-semibold text-[#C8922A] hover:underline">
-              Solicitor guides
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-[#F4F8FB] py-12 sm:py-16">
-        <div className="mx-auto min-w-0 max-w-6xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-xl font-bold text-[#0B2D4E] sm:text-2xl">Somalia by Region</h2>
-          <p className="mt-2 max-w-3xl text-[#374151]">
-            Somalia&apos;s legal framework differs radically by region. Dedicated region pages for Mogadishu, Somaliland,
-            Puntland, and south/central Somalia.
-          </p>
-          <div className="mt-8">
-            <CardGrid
-              items={regions.map((r) => ({
-                title: r.title,
-                description: r.metaDescription.slice(0, 120) + "...",
-                href: `/regions/${r.slug}`,
-              }))}
-            />
-          </div>
-        </div>
-      </section>
-
-      <section className="py-12 sm:py-16">
-        <div className="mx-auto min-w-0 max-w-6xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-xl font-bold text-[#0B2D4E] sm:text-2xl">Expert Witness Services</h2>
-          <CardGrid
-            items={services.map((s) => ({
-              title: s.title,
-              description: s.description,
-              href: "/services",
-            }))}
-          />
-        </div>
-      </section>
-
-      <section className="py-12 sm:py-16">
-        <div className="mx-auto min-w-0 max-w-6xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-xl font-bold text-[#0B2D4E] sm:text-2xl">Case Types</h2>
-          <CardGrid
-            items={caseTypes.slice(0, 6).map((c) => ({
-              title: c.title,
-              description: c.metaDescription.slice(0, 100) + "...",
-              href: `/case-types/${c.slug}`,
-            }))}
-          />
-          <Link href="/case-types" className="mt-8 inline-flex min-h-[44px] items-center font-semibold text-[#C8922A] hover:underline">
-            View all case types
-          </Link>
-        </div>
-      </section>
-
-      <section className="bg-[#F4F8FB] py-12 sm:py-16">
-        <div className="mx-auto min-w-0 max-w-6xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-xl font-bold text-[#0B2D4E] sm:text-2xl">MOJ & CPIN Country Guidance</h2>
-          <p className="mt-4 max-w-3xl text-[#374151] leading-relaxed">
-            Stay current with MOJ and Others [2014], OA and Others [2022], July 2025 Mogadishu CPINs, and EUAA October
-            2025 country guidance. Our pillar guide explains the MOJ framework for UK asylum practitioners, with expert
-            analysis beyond generic CPIN positions.
-          </p>
-          <div className="mt-6 flex flex-wrap gap-4">
             <Link
               href="/moj-country-guidance"
-              className="inline-flex min-h-[44px] items-center rounded-[8px] bg-[#0B2D4E] px-6 py-3 font-semibold text-white hover:bg-[#082340]"
+              className="inline-flex min-h-[48px] items-center justify-center border border-white/40 px-7 py-3 font-semibold text-white transition hover:border-white hover:bg-white/10"
             >
-              MOJ Country Guidance Guide
+              MOJ framework
             </Link>
-            <Link
-              href="/cpin-country-guidance"
-              className="inline-flex min-h-[44px] items-center rounded-[8px] border-2 border-[#0B2D4E] px-6 py-3 font-semibold text-[#0B2D4E] hover:bg-[#F4F8FB]"
-            >
-              CPIN & Country Guidance
-            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Indexed reading layout — left spine + main column */}
+      <section className="border-b border-[#B8C9C4] bg-[#F7F8F6]">
+        <div className="mx-auto grid max-w-7xl lg:grid-cols-[11rem_1fr]">
+          <aside className="hidden border-r border-[#B8C9C4] pattern-lattice px-5 py-12 lg:block">
+            <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-[#1F5C54]">On this page</p>
+            <nav className="mt-6 space-y-4 text-sm" aria-label="Page sections">
+              {[
+                { href: "#why", label: "Why evidence matters", n: "01" },
+                { href: "#profiles", label: "Asylum profiles", n: "02" },
+                { href: "#regions", label: "Regions", n: "03" },
+                { href: "#funding", label: "Legal Aid", n: "04" },
+                { href: "#guidance", label: "MOJ & CPIN", n: "05" },
+              ].map((item) => (
+                <a key={item.href} href={item.href} className="group flex gap-2 text-[#3A4542] hover:text-[#0F2420]">
+                  <span className="font-display text-[#E07050]">{item.n}</span>
+                  <span className="border-b border-transparent group-hover:border-[#1F5C54]">{item.label}</span>
+                </a>
+              ))}
+            </nav>
+          </aside>
+
+          <div className="min-w-0 px-4 py-12 sm:px-8 sm:py-16 lg:px-12">
+            <div id="why" className="scroll-mt-28">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#E07050]">01 — Context</p>
+              <h2 className="font-display mt-3 text-3xl text-[#0F2420] sm:text-4xl">
+                Why Somali country evidence decides appeals
+              </h2>
+              <div className="mt-6 max-w-3xl space-y-4 text-[#3A4542] leading-relaxed">
+                <p>
+                  Somalia remains one of the densest country-guidance jurisdictions in the UK system. MOJ and Others
+                  [2014], OA and Others [2022], July 2025 Mogadishu CPINs, and EUAA October 2025 guidance sit alongside a
+                  fast-moving Al-Shabaab picture and sharply different legal realities in Mogadishu, Somaliland, Puntland,
+                  and south/central Somalia.
+                </p>
+                <p>
+                  Home Office refusals often rest on generic CPIN extracts that ignore clan protection gaps, diaspora
+                  remittance assumptions, or gender-specific risk. Tribunals in Glasgow, Edinburgh, Birmingham, London and
+                  elsewhere need evidence that answers the appellant&apos;s actual profile — not a recycled country
+                  summary.
+                </p>
+              </div>
+
+              <div className="mt-10 grid gap-0 border border-[#B8C9C4] md:grid-cols-3">
+                {[
+                  {
+                    t: "Practice Direction ready",
+                    d: "Reports written to Immigration Tribunal Practice Direction paragraph 10 and CPR Part 35 duties — clear methodology, sources, and limits of opinion.",
+                  },
+                  {
+                    t: "Current guidance stack",
+                    d: "Experts engage MOJ, OA, 2025 Mogadishu CPINs, EUAA CG, and open-source security reporting so the tribunal sees what the CPIN left out.",
+                  },
+                  {
+                    t: "Dual Legal Aid routes",
+                    d: "Instruction packs suited to SLAB prior approval in Scotland and LAA prior authority in England and Wales — plus notes for LSANI in Northern Ireland.",
+                  },
+                ].map((item, i) => (
+                  <div
+                    key={item.t}
+                    className="border-b border-[#B8C9C4] p-5 last:border-b-0 md:border-b-0 md:border-r md:last:border-r-0"
+                  >
+                    <span className="font-display text-sm text-[#E07050]">{String(i + 1).padStart(2, "0")}</span>
+                    <h3 className="font-display mt-2 text-lg text-[#0F2420]">{item.t}</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-[#3A4542]">{item.d}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div id="profiles" className="mt-16 scroll-mt-28 border-t border-[#B8C9C4] pt-16 sm:mt-20 sm:pt-20">
+              <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+                <div>
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#E07050]">02 — Profiles</p>
+                  <h2 className="font-display mt-3 text-3xl text-[#0F2420] sm:text-4xl">Highest-volume asylum profiles</h2>
+                  <p className="mt-3 max-w-xl text-[#3A4542]">
+                    Start here if you already know the risk category. Each page maps the expert questions tribunals ask.
+                  </p>
+                </div>
+                <Link href="/asylum-profiles" className="text-sm font-semibold text-[#1F5C54] hover:text-[#E07050]">
+                  All profiles →
+                </Link>
+              </div>
+              <ol className="mt-8 divide-y divide-[#B8C9C4] border-y border-[#B8C9C4]">
+                {featuredProfiles.map((p, i) => (
+                  <li key={p!.slug}>
+                    <Link
+                      href={`/asylum-profiles/${p!.slug}`}
+                      className="group flex flex-col gap-2 py-5 transition hover:bg-[#E8EEEC]/60 sm:flex-row sm:items-baseline sm:gap-6 sm:px-2"
+                    >
+                      <span className="font-display w-10 shrink-0 text-[#E07050]">{String(i + 1).padStart(2, "0")}</span>
+                      <span className="font-display min-w-0 flex-1 text-xl text-[#0F2420] group-hover:text-[#1F5C54]">
+                        {p!.title}
+                      </span>
+                      <span className="max-w-md text-sm leading-relaxed text-[#3A4542] sm:text-right">
+                        {p!.metaDescription.slice(0, 110)}…
+                      </span>
+                    </Link>
+                  </li>
+                ))}
+              </ol>
+            </div>
+
+            <div id="regions" className="mt-16 scroll-mt-28 border-t border-[#B8C9C4] pt-16 sm:mt-20 sm:pt-20">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#E07050]">03 — Geography</p>
+              <h2 className="font-display mt-3 text-3xl text-[#0F2420] sm:text-4xl">Region changes the legal test</h2>
+              <p className="mt-3 max-w-2xl text-[#3A4542] leading-relaxed">
+                A Mogadishu return analysis under MOJ is not interchangeable with Somaliland clan dynamics, Puntland
+                security, or Article 15(c) arguments for south/central Somalia. Instruct against the map the appellant
+                actually faces.
+              </p>
+              <div className="mt-8 grid gap-0 border border-[#B8C9C4] sm:grid-cols-2">
+                {regions.map((r, i) => (
+                  <Link
+                    key={r.slug}
+                    href={`/regions/${r.slug}`}
+                    className="group relative min-h-[11rem] overflow-hidden border-b border-[#B8C9C4] p-6 odd:border-r last:border-b-0 sm:[&:nth-last-child(-n+2)]:border-b-0"
+                  >
+                    {i === 0 ? (
+                      <Image
+                        src="/images/section-tide.jpg"
+                        alt=""
+                        fill
+                        className="object-cover opacity-[0.12] transition duration-500 group-hover:opacity-[0.2] group-hover:scale-105"
+                        sizes="(max-width: 640px) 100vw, 40vw"
+                      />
+                    ) : null}
+                    <div className="relative">
+                      <span className="font-display text-sm text-[#E07050]">{String(i + 1).padStart(2, "0")}</span>
+                      <h3 className="font-display mt-2 text-xl text-[#0F2420] group-hover:text-[#1F5C54]">{r.title}</h3>
+                      <p className="mt-2 text-sm leading-relaxed text-[#3A4542]">{r.metaDescription.slice(0, 100)}…</p>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            <div id="funding" className="mt-16 scroll-mt-28 border-t border-[#B8C9C4] pt-16 sm:mt-20 sm:pt-20">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#E07050]">04 — Funding</p>
+              <h2 className="font-display mt-3 text-3xl text-[#0F2420] sm:text-4xl">Legal Aid that matches the venue</h2>
+              <p className="mt-4 max-w-3xl leading-relaxed text-[#3A4542]">
+                Somali appeals are frequently run from Glasgow and Edinburgh. Those cases are usually SLAB-funded — not
+                LAA. SomaliaExpert is set up for both routes, and we flag what each board typically needs before
+                chargeable work starts.
+              </p>
+              <div className="mt-8 grid gap-8 lg:grid-cols-2">
+                <div className="border-t-2 border-[#E07050] pt-5">
+                  <h3 className="font-display text-xl text-[#0F2420]">Scotland — SLAB</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-[#3A4542]">{LEGAL_AID_SCOTLAND_SUMMARY}</p>
+                </div>
+                <div className="border-t-2 border-[#1F5C54] pt-5">
+                  <h3 className="font-display text-xl text-[#0F2420]">England &amp; Wales — LAA</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-[#3A4542]">{LEGAL_AID_ENGLAND_WALES_SUMMARY}</p>
+                </div>
+              </div>
+              <p className="mt-6 text-sm text-[#3A4542]">
+                See the{" "}
+                <Link href="/how-to-instruct" className="font-semibold text-[#1F5C54] hover:text-[#E07050]">
+                  instruction guide
+                </Link>{" "}
+                for CV, scope, hours, and fee materials boards expect. Northern Ireland solicitors should confirm LSANI
+                prior approval separately.
+              </p>
+            </div>
+
+            <div id="guidance" className="mt-16 scroll-mt-28 border-t border-[#B8C9C4] pt-16 sm:mt-20 sm:pt-20">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#E07050]">05 — Guidance</p>
+              <h2 className="font-display mt-3 text-3xl text-[#0F2420] sm:text-4xl">MOJ, CPIN, and how to challenge them</h2>
+              <p className="mt-4 max-w-3xl leading-relaxed text-[#3A4542]">
+                Use our pillar guides when you need a working map of MOJ return factors, current CPINs, and where expert
+                evidence typically bites — before you draft the letter of instruction.
+              </p>
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                <Link
+                  href="/moj-country-guidance"
+                  className="inline-flex min-h-[48px] items-center justify-center bg-[#0F2420] px-6 py-3 font-semibold text-white hover:bg-[#1A3833]"
+                >
+                  MOJ country guidance
+                </Link>
+                <Link
+                  href="/cpin-country-guidance"
+                  className="inline-flex min-h-[48px] items-center justify-center border border-[#0F2420] px-6 py-3 font-semibold text-[#0F2420] hover:bg-[#E8EEEC]"
+                >
+                  CPIN &amp; country guidance
+                </Link>
+                <Link
+                  href="/guides"
+                  className="inline-flex min-h-[48px] items-center justify-center px-6 py-3 font-semibold text-[#1F5C54] hover:text-[#E07050]"
+                >
+                  Solicitor guides →
+                </Link>
+              </div>
+            </div>
+
+            <div className="mt-16 border-t border-[#B8C9C4] pt-12 sm:mt-20">
+              <h2 className="font-display text-2xl text-[#0F2420]">Case types at a glance</h2>
+              <ul className="mt-6 columns-1 gap-x-10 sm:columns-2">
+                {caseTypes.slice(0, 6).map((c) => (
+                  <li key={c.slug} className="mb-3 break-inside-avoid">
+                    <Link href={`/case-types/${c.slug}`} className="text-sm font-medium text-[#1F5C54] hover:text-[#E07050]">
+                      {c.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+              <Link href="/case-types" className="mt-4 inline-flex text-sm font-semibold text-[#0F2420] hover:text-[#E07050]">
+                View all case types →
+              </Link>
+            </div>
           </div>
         </div>
       </section>
