@@ -24,9 +24,9 @@ export function NavDropdown({
     <div className="group relative">
       <Link
         href={href}
-        className="inline-flex min-h-[44px] items-center gap-2 px-2.5 py-2 text-[13px] font-medium tracking-wide text-[#3A4542] transition-colors hover:text-[#0F2420]"
+        className="inline-flex min-h-[44px] items-center gap-2 px-2.5 py-2 text-[13px] font-medium tracking-wide text-[#4A5058] transition-colors hover:text-[#1C1F24]"
       >
-        <span className="font-display text-[11px] tabular-nums text-[#E07050] opacity-80">{index}</span>
+        <span className="font-display text-[11px] tabular-nums text-[#7A3048] opacity-80">{index}</span>
         <span className="border-b border-transparent group-hover:border-sea">{label}</span>
         <svg
           className="h-3 w-3 text-sea transition-transform duration-200 group-hover:rotate-180"

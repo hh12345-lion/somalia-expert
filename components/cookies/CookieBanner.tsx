@@ -4,9 +4,9 @@ import Link from "next/link";
 import { useCookieConsent } from "./CookieConsentContext";
 
 const btnPrimary =
-  "inline-flex min-h-[44px] w-full items-center justify-center rounded-[8px] bg-[#E07050] px-5 py-2.5 text-sm font-semibold text-white shadow-[0_2px_8px_rgba(224,112,80,0.35)] transition hover:bg-[#C45A3C] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#E07050] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0F2420] sm:w-auto";
+  "inline-flex min-h-[44px] w-full items-center justify-center rounded-[8px] bg-[#7A3048] px-5 py-2.5 text-sm font-semibold text-white shadow-[0_2px_8px_rgba(122,48,72,0.35)] transition hover:bg-[#5E2438] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#7A3048] focus-visible:ring-offset-2 focus-visible:ring-offset-[#1C1F24] sm:w-auto";
 const btnSecondary =
-  "inline-flex min-h-[44px] w-full items-center justify-center rounded-[8px] border border-white/35 bg-white/5 px-5 py-2.5 text-sm font-semibold text-white backdrop-blur-sm transition hover:bg-white/12 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#0F2420] sm:w-auto";
+  "inline-flex min-h-[44px] w-full items-center justify-center rounded-[8px] border border-white/35 bg-white/5 px-5 py-2.5 text-sm font-semibold text-white backdrop-blur-sm transition hover:bg-white/12 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#1C1F24] sm:w-auto";
 const btnGhost =
   "inline-flex min-h-[44px] w-full items-center justify-center rounded-[8px] px-4 py-2.5 text-sm font-medium text-white/90 underline-offset-2 transition hover:bg-white/8 hover:text-white hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-white sm:w-auto";
 
@@ -23,12 +23,12 @@ export function CookieBanner() {
       aria-modal="false"
       className="fixed inset-x-0 bottom-0 z-[100] px-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] sm:px-6 animate-[slideUp_0.45s_cubic-bezier(0.22,1,0.36,1)]"
     >
-      <div className="mx-auto max-w-5xl overflow-hidden rounded-[8px] border border-[#E07050]/30 bg-[#0F2420] shadow-[0_-4px_40px_rgba(0,0,0,0.28),0_8px_32px_rgba(15,36,32,0.4)]">
-        <div className="h-1 bg-gradient-to-r from-[#E07050] via-[#E88A70] to-[#E07050]" aria-hidden />
+      <div className="mx-auto max-w-5xl overflow-hidden rounded-[8px] border border-[#7A3048]/30 bg-[#1C1F24] shadow-[0_-4px_40px_rgba(0,0,0,0.28),0_8px_32px_rgba(28,31,36,0.4)]">
+        <div className="h-1 bg-gradient-to-r from-[#7A3048] via-[#9A4A62] to-[#7A3048]" aria-hidden />
         <div className="p-5 sm:p-6">
           <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
             <div className="max-w-2xl">
-              <p className="text-xs font-bold uppercase tracking-[0.14em] text-[#E07050]">
+              <p className="text-xs font-bold uppercase tracking-[0.14em] text-[#7A3048]">
                 Privacy & compliance
               </p>
               <h2 id="cookie-banner-title" className="mt-1.5 text-lg font-bold text-white sm:text-xl">
@@ -38,11 +38,11 @@ export function CookieBanner() {
                 We use cookies to run this website securely, understand how solicitors use our
                 resources, and measure marketing performance. You can accept all cookies, reject
                 non-essential cookies, or customise your preferences. See our{" "}
-                <Link href="/cookie-policy" className="font-semibold text-[#E07050] hover:underline">
+                <Link href="/cookie-policy" className="font-semibold text-[#7A3048] hover:underline">
                   Cookie Policy
                 </Link>{" "}
                 and{" "}
-                <Link href="/privacy" className="font-semibold text-[#E07050] hover:underline">
+                <Link href="/privacy" className="font-semibold text-[#7A3048] hover:underline">
                   Privacy Policy
                 </Link>
                 .

@@ -1,23 +1,23 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-ink: #0f2420;
-  --color-ink-soft: #1a3833;
-  --color-sea: #1f5c54;
-  --color-flare: #e07050;
-  --color-flare-deep: #c45a3c;
-  --color-mist: #e8eeec;
-  --color-paper: #f7f8f6;
-  --color-border: #b8c9c4;
-  --color-body: #3a4542;
-  --color-primary: #0f2420;
-  --color-accent: #e07050;
-  --color-section-alt: #e8eeec;
-  --font-sans: var(--font-figtree);
-  --font-display: var(--font-newsreader);
-  --radius-card: 2px;
-  --radius-sm: 2px;
-  --shadow-card: 0 1px 0 rgba(15, 36, 32, 0.06);
+  --color-ink: #1c1f24;
+  --color-ink-soft: #2a3038;
+  --color-dusk: #3d4a5c;
+  --color-wine: #7a3048;
+  --color-wine-deep: #5e2438;
+  --color-mist: #eceef1;
+  --color-paper: #f3f4f6;
+  --color-border: #d4d8de;
+  --color-body: #4a5058;
+  --color-primary: #1c1f24;
+  --color-accent: #7a3048;
+  --color-section-alt: #eceef1;
+  --font-sans: var(--font-karla);
+  --font-display: var(--font-cormorant);
+  --radius-card: 14px;
+  --radius-sm: 8px;
+  --shadow-card: 0 18px 40px -24px rgba(28, 31, 36, 0.35);
   --breakpoint-xs: 375px;
 }
 
@@ -29,7 +29,7 @@ html {
 body {
   background: var(--color-paper);
   color: var(--color-body);
-  font-family: var(--font-figtree), system-ui, sans-serif;
+  font-family: var(--font-karla), system-ui, sans-serif;
   overflow-x: hidden;
   min-width: 320px;
 }
@@ -40,23 +40,19 @@ section {
 }
 
 .font-display {
-  font-family: var(--font-newsreader), Georgia, "Times New Roman", serif;
+  font-family: var(--font-cormorant), Georgia, "Times New Roman", serif;
 }
 
-/* Soft Somali textile lattice — custom, not stock */
-.pattern-lattice {
-  background-color: var(--color-mist);
-  background-image:
-    linear-gradient(135deg, rgba(31, 92, 84, 0.07) 1px, transparent 1px),
-    linear-gradient(45deg, rgba(224, 112, 80, 0.06) 1px, transparent 1px);
-  background-size: 28px 28px, 28px 28px;
-}
-
-.pattern-ink {
+.masthead-film {
   background-color: var(--color-ink);
-  background-image:
-    radial-gradient(ellipse 80% 50% at 100% 0%, rgba(31, 92, 84, 0.55), transparent 55%),
-    radial-gradient(ellipse 60% 40% at 0% 100%, rgba(224, 112, 80, 0.18), transparent 50%);
+  background-image: linear-gradient(90deg, rgba(28, 31, 36, 0.55), rgba(28, 31, 36, 0.15)),
+    url("/images/hero-coast.jpg");
+  background-size: cover;
+  background-position: center 42%;
+}
+
+.panel-dusk {
+  background: linear-gradient(165deg, #2f3948 0%, #1c1f24 70%);
 }
 
 @keyframes slideUp {
@@ -77,43 +73,6 @@ section {
   to {
     opacity: 1;
   }
-}
-
-@keyframes riseIn {
-  from {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes drawRule {
-  from {
-    transform: scaleX(0);
-  }
-  to {
-    transform: scaleX(1);
-  }
-}
-
-.animate-rise {
-  animation: riseIn 0.7s ease-out both;
-}
-
-.animate-rise-delay {
-  animation: riseIn 0.8s ease-out 0.12s both;
-}
-
-.animate-rise-delay-2 {
-  animation: riseIn 0.85s ease-out 0.24s both;
-}
-
-.rule-draw {
-  transform-origin: left center;
-  animation: drawRule 0.9s ease-out 0.2s both;
 }
 
 .table-scroll {
@@ -151,9 +110,4 @@ svg {
 
 #mobile-nav-toggle:checked ~ .header-bar .icon-close {
   display: block;
-}
-
-/* Folio dropdown panel */
-.folio-panel {
-  box-shadow: 8px 12px 0 rgba(15, 36, 32, 0.06);
 }

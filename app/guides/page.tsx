@@ -23,7 +23,7 @@ export default function GuidesPage() {
         subtitle="Practical guides for UK immigration solicitors instructing Somalia country expert witnesses."
         breadcrumbs={crumbs}
       >
-        <p className="mb-8 text-[#3A4542] leading-relaxed">
+        <p className="mb-8 text-[#4A5058] leading-relaxed">
           These guides cover MOJ country guidance, clan structure analysis, Al-Shabaab risk assessment, FGM claims,
           regional analysis for Somaliland and Puntland, and the instruction process for Legal Aid and privately funded
           cases.
@@ -35,9 +35,9 @@ export default function GuidesPage() {
             href: `/guides/${g.slug}`,
           }))}
         />
-        <p className="mt-8 text-[#3A4542]">
+        <p className="mt-8 text-[#4A5058]">
           For MOJ country guidance analysis, see our{" "}
-          <Link href="/moj-country-guidance" className="font-semibold text-[#E07050] hover:underline">
+          <Link href="/moj-country-guidance" className="font-semibold text-[#7A3048] hover:underline">
             MOJ country guidance pillar page
           </Link>
           .

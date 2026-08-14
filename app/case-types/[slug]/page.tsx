@@ -30,7 +30,7 @@ export default async function CaseTypePage({ params }: { params: Promise<{ slug:
       <PageJsonLd breadcrumbs={crumbs} faqs={ct.faqs} />
       <PageShell title={ct.h1} breadcrumbs={crumbs}>
         {ct.content.map((p, i) => (
-          <p key={i} className="mb-4 text-[#3A4542] leading-relaxed">
+          <p key={i} className="mb-4 text-[#4A5058] leading-relaxed">
             {p}
           </p>
         ))}

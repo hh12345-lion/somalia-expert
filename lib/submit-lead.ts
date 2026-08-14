@@ -4,25 +4,27 @@ export type SubmitLeadInput = {
   fullName: string;
   email: string;
   phone: string;
+  organisation?: string;
+  summary?: string;
 };
 
 export type SubmitLeadPayload = SubmitLeadInput & {
-  organisation?: string;
   caseProfile?: string;
   region?: string;
   proceedings?: string;
   funding?: string;
   deadline?: string;
   urgency?: string;
-  summary?: string;
 };
 
-/** Minimal webhook payload (n8n / Lead_notification_url) */
+/** Webhook payload (n8n / Lead_notification_url) */
 export function buildLeadWebhookPayload(input: SubmitLeadInput) {
   return {
     "Full Name": input.fullName.trim(),
     Email: input.email.trim(),
     "Phone Number": input.phone.trim(),
+    Firm: (input.organisation ?? "").trim(),
+    "Case note": (input.summary ?? "").trim(),
     "Brand name": LEAD_BRAND_NAME,
   };
 }

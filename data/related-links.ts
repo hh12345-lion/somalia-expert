@@ -1,8 +1,8 @@
 export type RelatedLink = { label: string; href: string };
 
 const INSTRUCTION_LINKS: RelatedLink[] = [
-  { label: "How to Instruct", href: "/how-to-instruct" },
-  { label: "Contact Us", href: "/contact" },
+  { label: "How it works", href: "/how-to-instruct" },
+  { label: "Enquire", href: "/#enquire" },
 ];
 
 function mergeLinks(...groups: RelatedLink[][]): RelatedLink[] {
@@ -209,7 +209,7 @@ export function getMojRelatedLinks(): RelatedLink[] {
     { label: "All Asylum Profiles", href: "/asylum-profiles" },
     { label: "All Regions", href: "/regions" },
     { label: "All Guides", href: "/guides" },
-    { label: "How to Instruct", href: "/how-to-instruct" },
-    { label: "Contact Us", href: "/contact" },
+    { label: "How it works", href: "/how-to-instruct" },
+    { label: "Enquire", href: "/#enquire" },
   ];
 }

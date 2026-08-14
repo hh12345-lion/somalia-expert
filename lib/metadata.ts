@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { SITE_URL } from "./constants";
+import { SITE_URL, SITE_NAME } from "./constants";
 
-const OG_IMAGE_ALT = "SomaliaExpert - Somalia Expert Witness Services UK";
+const OG_IMAGE_ALT = "Somalia Expert - Expert Witness Services UK";
 
 export const OPEN_GRAPH_IMAGE = {
   url: `${SITE_URL}/opengraph-image`,
@@ -32,7 +32,7 @@ export function createMetadata({
       title,
       description,
       url,
-      siteName: "SomaliaExpert",
+      siteName: SITE_NAME,
       locale: "en_GB",
       type: "website",
       images: [OPEN_GRAPH_IMAGE],

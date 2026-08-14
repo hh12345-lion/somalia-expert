@@ -23,7 +23,7 @@ export default function AsylumProfilesPage() {
         subtitle="Dedicated expert witness evidence for each major Somali asylum profile in UK immigration tribunals."
         breadcrumbs={crumbs}
       >
-        <p className="mb-8 text-[#3A4542] leading-relaxed">
+        <p className="mb-8 text-[#4A5058] leading-relaxed">
           Somalia is one of the most legally complex asylum jurisdictions in the UK system. Each profile below links to
           a dedicated page with country guidance analysis, CPIN references, and profile-specific expert evidence
           guidance for solicitors and Legal Aid practitioners.
@@ -35,9 +35,9 @@ export default function AsylumProfilesPage() {
             href: `/asylum-profiles/${p.slug}`,
           }))}
         />
-        <p className="mt-8 text-[#3A4542]">
+        <p className="mt-8 text-[#4A5058]">
           For MOJ country guidance analysis, see our{" "}
-          <Link href="/moj-country-guidance" className="font-semibold text-[#E07050] hover:underline">
+          <Link href="/moj-country-guidance" className="font-semibold text-[#7A3048] hover:underline">
             MOJ country guidance pillar page
           </Link>
           .

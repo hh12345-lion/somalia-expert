@@ -23,7 +23,7 @@ export default function RegionsHubPage() {
         subtitle="Somalia's legal framework differs radically by region. Dedicated expert analysis for each jurisdiction."
         breadcrumbs={crumbs}
       >
-        <p className="mb-8 text-[#3A4542] leading-relaxed">
+        <p className="mb-8 text-[#4A5058] leading-relaxed">
           UK asylum tribunals assess Somalia claims differently depending on the appellant&apos;s region of origin.
           Mogadishu is governed by the MOJ country guidance framework. South and central Somalia outside Mogadishu
           falls under Article 15(c) indiscriminate violence analysis. Somaliland and Puntland require separate regional
@@ -36,9 +36,9 @@ export default function RegionsHubPage() {
             href: `/regions/${r.slug}`,
           }))}
         />
-        <p className="mt-8 text-[#3A4542]">
+        <p className="mt-8 text-[#4A5058]">
           For the MOJ framework governing Mogadishu return, see our{" "}
-          <Link href="/moj-country-guidance" className="font-semibold text-[#E07050] hover:underline">
+          <Link href="/moj-country-guidance" className="font-semibold text-[#7A3048] hover:underline">
             MOJ country guidance pillar page
           </Link>
           .

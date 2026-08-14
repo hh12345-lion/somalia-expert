@@ -72,6 +72,8 @@ exports.handler = async (event) => {
     "Full Name": parsed.ok.fullName.trim(),
     Email: parsed.ok.email.trim(),
     "Phone Number": parsed.ok.phone.trim(),
+    Firm: typeof json.organisation === "string" ? json.organisation.trim() : "",
+    "Case note": typeof json.summary === "string" ? json.summary.trim() : "",
     "Brand name": BRAND_NAME,
   };
 

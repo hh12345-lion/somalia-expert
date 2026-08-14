@@ -40,18 +40,18 @@ export default async function RegionPage({ params }: { params: Promise<{ slug: s
       <PageJsonLd breadcrumbs={crumbs} faqs={region.faqs} />
       <PageShell title={region.h1} breadcrumbs={crumbs}>
         {region.content.map((p, i) => (
-          <p key={i} className="mb-4 text-[#3A4542] leading-relaxed">
+          <p key={i} className="mb-4 text-[#4A5058] leading-relaxed">
             {p}
           </p>
         ))}
 
-        <h2 className="mt-8 text-xl font-bold text-[#0F2420]">Related Asylum Profiles</h2>
+        <h2 className="mt-8 text-xl font-bold text-[#1C1F24]">Related Asylum Profiles</h2>
         <ul className="mt-4 space-y-2">
           {region.relatedProfiles.map((s) => {
             const profile = getAsylumProfile(s);
             return (
               <li key={s}>
-                <Link href={`/asylum-profiles/${s}`} className="text-[#E07050] hover:underline">
+                <Link href={`/asylum-profiles/${s}`} className="text-[#7A3048] hover:underline">
                   {profile?.title ?? s}
                 </Link>
               </li>

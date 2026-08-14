@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Figtree, Newsreader } from "next/font/google";
+import { Cormorant_Garamond, Karla } from "next/font/google";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { CookieConsentProvider } from "@/components/cookies";
@@ -7,15 +7,16 @@ import { ConsentDefaultsScript } from "@/components/cookies/ConsentDefaultsScrip
 import { SITE_URL } from "@/lib/constants";
 import "./globals.css";
 
-const figtree = Figtree({
+const karla = Karla({
   subsets: ["latin"],
-  variable: "--font-figtree",
+  variable: "--font-karla",
   display: "swap",
 });
 
-const newsreader = Newsreader({
+const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
-  variable: "--font-newsreader",
+  weight: ["500", "600", "700"],
+  variable: "--font-cormorant",
   display: "swap",
 });
 
@@ -30,7 +31,7 @@ export const metadata: Metadata = {
   title: {
     default:
       "Somalia Expert Witness UK | Country Reports for Asylum & Immigration Tribunals",
-    template: "%s | SomaliaExpert",
+    template: "%s | Somalia Expert",
   },
   description:
     "Find a qualified Somalia expert witness in the UK. Country condition reports for asylum appeals in England, Wales, Scotland, and Northern Ireland. SLAB and LAA Legal Aid compatible.",
@@ -51,7 +52,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en-GB" className={`${figtree.variable} ${newsreader.variable} h-full`}>
+    <html lang="en-GB" className={`${karla.variable} ${cormorant.variable} h-full`}>
       <body className="flex min-h-full flex-col font-sans antialiased">
         <ConsentDefaultsScript />
         <CookieConsentProvider>

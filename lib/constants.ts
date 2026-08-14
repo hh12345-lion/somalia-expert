@@ -1,12 +1,12 @@
 export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || "https://www.somaliaexpert.com";
-export const SITE_NAME = "SomaliaExpert";
+export const SITE_NAME = "Somalia Expert";
 export const SITE_EMAIL = "cases@somaliaexpert.com";
 export const LINKEDIN_URL = "https://www.linkedin.com/company/SomaliaExpertWitness";
 
 /** UK-only service scope — use in page copy and footer, not promotional banners. */
 export const SITE_SCOPE =
-  "SomaliaExpert is a UK-only service for immigration solicitors, law firms, and Legal Aid practitioners instructing Somalia country experts for First-tier Tribunal and Upper Tribunal proceedings in England, Wales, Scotland, and Northern Ireland. This service is not available outside the United Kingdom.";
+  "Somalia Expert is a UK-only service for immigration solicitors, law firms, and Legal Aid practitioners instructing Somalia country experts for First-tier Tribunal and Upper Tribunal proceedings in England, Wales, Scotland, and Northern Ireland. This service is not available outside the United Kingdom.";
 
 /** Scottish Legal Aid Board — primary legal aid route for Scotland-based instructions. */
 export const LEGAL_AID_SCOTLAND_SUMMARY =
@@ -17,13 +17,13 @@ export const LEGAL_AID_ENGLAND_WALES_SUMMARY =
   "In England and Wales, Legal Aid Agency (LAA) prior authority is required for most expert witness disbursements in asylum proceedings, unless a valid exception applies. Solicitors should confirm funding before issuing a letter of instruction.";
 
 export const COLORS = {
-  primary: "#0F2420",
-  accent: "#E07050",
-  background: "#F7F8F6",
-  sectionAlt: "#E8EEEC",
-  border: "#B8C9C4",
-  heading: "#0F2420",
-  body: "#3A4542",
-  sea: "#1F5C54",
-  flareDeep: "#C45A3C",
+  primary: "#1C1F24",
+  accent: "#7A3048",
+  background: "#F3F4F6",
+  sectionAlt: "#ECEEF1",
+  border: "#D4D8DE",
+  heading: "#1C1F24",
+  body: "#4A5058",
+  dusk: "#3D4A5C",
+  wineDeep: "#5E2438",
 } as const;

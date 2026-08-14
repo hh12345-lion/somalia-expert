@@ -16,21 +16,21 @@ export default function QualificationsPage() {
     <>
       <PageJsonLd breadcrumbs={crumbs} />
       <PageShell title="Somalia Expert Witness Qualifications UK" breadcrumbs={crumbs}>
-        <h2 className="text-xl font-bold text-[#0F2420]">What Makes a Qualified Somalia Expert</h2>
-        <p className="mt-4 text-[#3A4542] leading-relaxed">
+        <h2 className="text-xl font-bold text-[#1C1F24]">What Makes a Qualified Somalia Expert</h2>
+        <p className="mt-4 text-[#4A5058] leading-relaxed">
           A qualified Somalia expert witness holds academic credentials (PhD, MA, or equivalent research background) in
           African Studies, Political Science, Anthropology, International Relations, or a related discipline. Field
           research experience in Somalia, Somaliland, and Puntland is essential, not optional.
         </p>
-        <p className="mt-4 text-[#3A4542] leading-relaxed">
+        <p className="mt-4 text-[#4A5058] leading-relaxed">
           Language expertise in Somali, Maay, and af-Tunni demonstrates the ability to assess conditions beyond
           English-language sources. Current knowledge of country conditions, including MOJ and OA country guidance,
           July 2025 CPINs, and EUAA October 2025 guidance, is required. Prior tribunal acceptance in Somalia cases
           demonstrates evidential reliability.
         </p>
 
-        <h2 className="mt-10 text-xl font-bold text-[#0F2420]">Key Qualifications for Somalia Experts</h2>
-        <ul className="mt-4 list-disc space-y-2 pl-6 text-[#3A4542]">
+        <h2 className="mt-10 text-xl font-bold text-[#1C1F24]">Key Qualifications for Somalia Experts</h2>
+        <ul className="mt-4 list-disc space-y-2 pl-6 text-[#4A5058]">
           <li>Somali language expertise (Somali, Maay, af-Tunni)</li>
           <li>Field research experience in Somalia, Somaliland, and Puntland</li>
           <li>Clan structure and minority group knowledge</li>
@@ -39,33 +39,33 @@ export default function QualificationsPage() {
           <li>Current CPIN and country guidance knowledge (MOJ, OA, AMM)</li>
         </ul>
 
-        <h2 className="mt-10 text-xl font-bold text-[#0F2420]">
+        <h2 className="mt-10 text-xl font-bold text-[#1C1F24]">
           UK Tribunals and Legal Aid (Scotland)
         </h2>
-        <p className="mt-4 text-[#3A4542] leading-relaxed">
+        <p className="mt-4 text-[#4A5058] leading-relaxed">
           Somalia expert evidence is used in UK Immigration and Asylum Chamber proceedings across England, Wales,
           Scotland, and Northern Ireland. Scottish solicitors commonly instruct experts for hearings listed in Glasgow
           and Edinburgh under Scottish Legal Aid Board (SLAB) civil legal aid. Prior SLAB approval of expert fees is
           required before chargeable work begins.
         </p>
 
-        <h2 className="mt-10 text-xl font-bold text-[#0F2420]">
+        <h2 className="mt-10 text-xl font-bold text-[#1C1F24]">
           Immigration Tribunal Practice Direction: Expert Duties
         </h2>
-        <p className="mt-4 text-[#3A4542] leading-relaxed">
+        <p className="mt-4 text-[#4A5058] leading-relaxed">
           An expert&apos;s paramount duty is to the tribunal: to assist it in reaching a decision by providing an
           objective, unbiased opinion on matters within their expertise, not to advocate for either the appellant or
           the Home Office. Expert evidence should be the independent product of the expert, uninfluenced by the
           pressures of litigation.
         </p>
-        <p className="mt-4 text-[#3A4542] leading-relaxed">
+        <p className="mt-4 text-[#4A5058] leading-relaxed">
           Reports must address matters within the expert&apos;s expertise, cite verifiable sources, and distinguish
           fact from opinion. The expert must not express views on the credibility of the appellant or the ultimate
           legal conclusion on refugee status.
         </p>
 
-        <h2 className="mt-10 text-xl font-bold text-[#0F2420]">Red Flags</h2>
-        <ul className="mt-4 list-disc space-y-2 pl-6 text-[#3A4542]">
+        <h2 className="mt-10 text-xl font-bold text-[#1C1F24]">Red Flags</h2>
+        <ul className="mt-4 list-disc space-y-2 pl-6 text-[#4A5058]">
           <li>Expert without current knowledge of Somalia</li>
           <li>Reports that simply reproduce CPIN without independent analysis</li>
           <li>No field research or in-country experience</li>

@@ -35,29 +35,29 @@ export default function ServicesPage() {
         subtitle="CPR Part 35 and Immigration Tribunal Practice Direction compliant reports for all major Somali asylum profiles."
         breadcrumbs={crumbs}
       >
-        <p className="mb-4 text-[#3A4542] leading-relaxed">
+        <p className="mb-4 text-[#4A5058] leading-relaxed">
           SomaliaExpert provides eight specialist expert witness services for UK immigration solicitors, law firms, and
           Legal Aid practitioners in England, Wales, Scotland, and Northern Ireland. All reports are prepared by
           qualified Somalia country experts with current CPIN knowledge, MOJ framework expertise, and field research
           experience in Somalia, Somaliland, and Puntland.
         </p>
-        <p className="mb-8 text-sm text-[#3A4542] leading-relaxed">{SITE_SCOPE}</p>
+        <p className="mb-8 text-sm text-[#4A5058] leading-relaxed">{SITE_SCOPE}</p>
         <CardGrid
           items={services.map((s) => ({
             title: s.title,
             description: s.description,
           }))}
         />
-        <h2 className="mt-12 text-xl font-bold text-[#0F2420]">Legal Aid: Scotland (SLAB) and England/Wales (LAA)</h2>
-        <p className="mt-4 max-w-3xl text-[#3A4542] leading-relaxed">{LEGAL_AID_SCOTLAND_SUMMARY}</p>
-        <p className="mt-4 max-w-3xl text-[#3A4542] leading-relaxed">{LEGAL_AID_ENGLAND_WALES_SUMMARY}</p>
-        <p className="mt-8 text-[#3A4542]">
+        <h2 className="mt-12 text-xl font-bold text-[#1C1F24]">Legal Aid: Scotland (SLAB) and England/Wales (LAA)</h2>
+        <p className="mt-4 max-w-3xl text-[#4A5058] leading-relaxed">{LEGAL_AID_SCOTLAND_SUMMARY}</p>
+        <p className="mt-4 max-w-3xl text-[#4A5058] leading-relaxed">{LEGAL_AID_ENGLAND_WALES_SUMMARY}</p>
+        <p className="mt-8 text-[#4A5058]">
           Questions about instructing an expert? See{" "}
-          <Link href="/how-to-instruct" className="font-semibold text-[#E07050] hover:underline">
+          <Link href="/how-to-instruct" className="font-semibold text-[#7A3048] hover:underline">
             how to instruct
           </Link>{" "}
           or{" "}
-          <Link href="/contact" className="font-semibold text-[#E07050] hover:underline">
+          <Link href="/contact" className="font-semibold text-[#7A3048] hover:underline">
             contact us
           </Link>
           .

@@ -2,11 +2,6 @@ import { google, sheets_v4 } from "googleapis";
 
 type CellValue = string | number | boolean | null;
 
-interface SheetTarget {
-  spreadsheetId?: string;
-  sheetName?: string;
-}
-
 interface AppendResult {
   success: boolean;
   updatedRange: string | null | undefined;
@@ -34,14 +29,16 @@ export function isGoogleSheetsConfigured(): boolean {
   );
 }
 
-/** Append a single row to the configured Google Sheet tab */
-export async function appendRow(
-  values: CellValue[],
-  target?: SheetTarget
-): Promise<AppendResult> {
+/** Single destination tab for every enquiry. Never create extra tabs per form. */
+export function getSheetTabName(): string {
+  return process.env.GOOGLE_SHEET_TAB_NAME?.trim() || "Sheet1";
+}
+
+/** Append a single row to the one configured Google Sheet tab */
+export async function appendRow(values: CellValue[]): Promise<AppendResult> {
   const sheets = getSheetsClient();
-  const spreadsheetId = target?.spreadsheetId || process.env.GOOGLE_SHEET_ID;
-  const sheetName = target?.sheetName || process.env.GOOGLE_SHEET_TAB_NAME || "Sheet1";
+  const spreadsheetId = process.env.GOOGLE_SHEET_ID;
+  const sheetName = getSheetTabName();
 
   if (!spreadsheetId) {
     throw new Error("Missing spreadsheet ID: set GOOGLE_SHEET_ID");
@@ -49,7 +46,7 @@ export async function appendRow(
 
   const response = await sheets.spreadsheets.values.append({
     spreadsheetId,
-    range: `${sheetName}!A:A`,
+    range: `'${sheetName.replace(/'/g, "''")}'!A:A`,
     valueInputOption: "USER_ENTERED",
     insertDataOption: "INSERT_ROWS",
     requestBody: { values: [values] },
