@@ -5,6 +5,15 @@
  */
 const BRAND_NAME = "Somalia Expert";
 
+
+function getSiteDomain() {
+  const raw = process.env.NEXT_PUBLIC_SITE_URL || "https://somaliaexpert.com";
+  try {
+    return new URL(raw).hostname.replace(/^www\./, "");
+  } catch {
+    return "somaliaexpert.com";
+  }
+}
 function getLeadNotificationUrl() {
   return (
     process.env.Lead_notification_url?.trim() ||
@@ -75,6 +84,7 @@ exports.handler = async (event) => {
     Firm: typeof json.organisation === "string" ? json.organisation.trim() : "",
     "Case note": typeof json.summary === "string" ? json.summary.trim() : "",
     "Brand name": BRAND_NAME,
+    domain: getSiteDomain(),
   };
 
   const ac = new AbortController();

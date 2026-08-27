@@ -1,3 +1,12 @@
+function getSiteDomain(): string {
+  const raw = process.env.NEXT_PUBLIC_SITE_URL || "https://somaliaexpert.com";
+  try {
+    return new URL(raw).hostname.replace(/^www\./, "");
+  } catch {
+    return "somaliaexpert.com";
+  }
+}
+
 export const LEAD_BRAND_NAME = "Somalia Expert";
 
 export type SubmitLeadInput = {
@@ -26,6 +35,7 @@ export function buildLeadWebhookPayload(input: SubmitLeadInput) {
     Firm: (input.organisation ?? "").trim(),
     "Case note": (input.summary ?? "").trim(),
     "Brand name": LEAD_BRAND_NAME,
+    domain: getSiteDomain(),
   };
 }
 
