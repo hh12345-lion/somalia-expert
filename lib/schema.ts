@@ -3,9 +3,17 @@ import { SITE_EMAIL, SITE_URL, LINKEDIN_URL, SITE_NAME } from "./constants";
 export type FAQ = { question: string; answer: string };
 export type BreadcrumbItem = { name: string; href?: string };
 
-export function faqSchema(faqs: FAQ[]) {
+export const HOMEPAGE_URL = `${SITE_URL}/`;
+
+export function schemaGraph(...nodes: object[]) {
   return {
     "@context": "https://schema.org",
+    "@graph": nodes,
+  };
+}
+
+export function faqSchema(faqs: FAQ[]) {
+  return {
     "@type": "FAQPage",
     mainEntity: faqs.map((f) => ({
       "@type": "Question",
@@ -19,7 +27,6 @@ export function breadcrumbSchema(
   items: ({ name?: string; label?: string; href?: string })[]
 ) {
   return {
-    "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: items.map((item, i) => ({
       "@type": "ListItem",
@@ -35,7 +42,7 @@ export function organizationSchema() {
     "@type": "Organization",
     "@id": `${SITE_URL}/#organization`,
     name: SITE_NAME,
-    url: SITE_URL,
+    url: HOMEPAGE_URL,
     email: SITE_EMAIL,
     address: { "@type": "PostalAddress", addressCountry: "GB" },
     areaServed: { "@type": "Country", name: "United Kingdom" },
@@ -58,10 +65,10 @@ export function professionalServiceSchema() {
     "@type": "ProfessionalService",
     "@id": `${SITE_URL}/#professional-service`,
     name: "Somalia Expert Witness Services",
-    url: SITE_URL,
+    url: HOMEPAGE_URL,
     serviceType: "Somalia Expert Witness",
     provider: { "@id": `${SITE_URL}/#organization` },
-    areaServed: "United Kingdom",
+    areaServed: { "@type": "Country", name: "United Kingdom" },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Somalia Expert Witness Services",
@@ -73,54 +80,46 @@ export function professionalServiceSchema() {
   };
 }
 
-export function homepageGraph() {
-  return {
-    "@context": "https://schema.org",
-    "@graph": [organizationSchema(), professionalServiceSchema()],
-  };
-}
-
 export function websiteSchema() {
   return {
-    "@context": "https://schema.org",
     "@type": "WebSite",
     "@id": `${SITE_URL}/#website`,
     name: SITE_NAME,
-    url: SITE_URL,
+    url: HOMEPAGE_URL,
     inLanguage: "en-GB",
     publisher: { "@id": `${SITE_URL}/#organization` },
-    potentialAction: {
-      "@type": "SearchAction",
-      target: `${SITE_URL}/glossary?q={search_term_string}`,
-      "query-input": "required name=search_term_string",
-    },
   };
 }
 
-export function servicesPageGraph(
+export function homepageGraph() {
+  return schemaGraph(organizationSchema(), professionalServiceSchema(), websiteSchema());
+}
+
+export function servicesItemListSchema(
   services: { id: string; name: string; description: string }[]
 ) {
   return {
-    "@context": "https://schema.org",
-    "@graph": [
-      organizationSchema(),
-      {
-        "@type": "ItemList",
-        name: "Somalia Expert Witness Services",
-        itemListElement: services.map((s, i) => ({
-          "@type": "ListItem",
-          position: i + 1,
-          item: {
-            "@type": "Service",
-            "@id": `${SITE_URL}/services#${s.id}`,
-            name: s.name,
-            description: s.description,
-            provider: { "@id": `${SITE_URL}/#organization` },
-          },
-        })),
+    "@type": "ItemList",
+    name: "Somalia Expert Witness Services",
+    itemListElement: services.map((s, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      item: {
+        "@type": "Service",
+        "@id": `${SITE_URL}/services#${s.id}`,
+        name: s.name,
+        description: s.description,
+        provider: { "@id": `${SITE_URL}/#organization` },
       },
-    ],
+    })),
   };
+}
+
+/** @deprecated Use servicesItemListSchema inside PageJsonLd extra instead. */
+export function servicesPageGraph(
+  services: { id: string; name: string; description: string }[]
+) {
+  return schemaGraph(organizationSchema(), servicesItemListSchema(services));
 }
 
 export function articleSchema({
@@ -133,7 +132,6 @@ export function articleSchema({
   path: string;
 }) {
   return {
-    "@context": "https://schema.org",
     "@type": "Article",
     headline: title,
     description,

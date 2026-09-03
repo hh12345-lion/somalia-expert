@@ -3,11 +3,9 @@ import { createMetadata } from "@/lib/metadata";
 import { SITE_EMAIL, SITE_SCOPE } from "@/lib/constants";
 
 export const metadata = createMetadata({
-  title: "Privacy Policy | SomaliaExpert",
-  description: "Privacy policy for SomaliaExpert.com",
+  title: "Privacy Policy | Somalia Expert",
+  description: "Privacy policy for Somalia Expert — how we handle contact form data and cookies.",
   path: "/privacy",
-  noindex: true,
-  follow: true,
 });
 
 export default function PrivacyPage() {

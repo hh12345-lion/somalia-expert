@@ -2,9 +2,8 @@ import Link from "next/link";
 import { PageShell } from "@/components/layout/PageShell";
 import { CardGrid } from "@/components/ui/CardGrid";
 import { PageJsonLd } from "@/components/seo/PageJsonLd";
-import { JsonLd } from "@/components/ui/JsonLd";
 import { createMetadata } from "@/lib/metadata";
-import { servicesPageGraph } from "@/lib/schema";
+import { servicesItemListSchema } from "@/lib/schema";
 import { services } from "@/data/services";
 import {
   LEGAL_AID_ENGLAND_WALES_SUMMARY,
@@ -24,9 +23,9 @@ export default function ServicesPage() {
 
   return (
     <>
-      <PageJsonLd breadcrumbs={crumbs} />
-      <JsonLd
-        data={servicesPageGraph(
+      <PageJsonLd
+        breadcrumbs={crumbs}
+        extra={servicesItemListSchema(
           services.map((s) => ({ id: s.id, name: s.title, description: s.description }))
         )}
       />
@@ -53,10 +52,14 @@ export default function ServicesPage() {
         <p className="mt-4 max-w-3xl text-[#4A5058] leading-relaxed">{LEGAL_AID_ENGLAND_WALES_SUMMARY}</p>
         <p className="mt-8 text-[#4A5058]">
           Questions about instructing an expert? See{" "}
+          <Link href="/what-is-a-somalia-expert-witness" className="font-semibold text-[#7A3048] hover:underline">
+            what a Somalia expert witness is
+          </Link>
+          ,{" "}
           <Link href="/how-to-instruct" className="font-semibold text-[#7A3048] hover:underline">
             how to instruct
-          </Link>{" "}
-          or{" "}
+          </Link>
+          , or{" "}
           <Link href="/contact" className="font-semibold text-[#7A3048] hover:underline">
             contact us
           </Link>

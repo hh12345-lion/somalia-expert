@@ -1,10 +1,9 @@
 #!/usr/bin/env npx tsx
 /**
- * Verifies SEO architecture: sitemap inventory, slug redirects, internal linking matrix.
+ * Verifies SEO architecture: URL inventory, slug redirects, internal linking matrix.
+ * Sitemap and robots are served dynamically from app/sitemap.ts and app/robots.ts.
  * Run: npm run seo:verify
  */
-import { readFileSync, existsSync } from "fs";
-import { join } from "path";
 import { buildPublicUrlInventory } from "../lib/seo/publicUrlInventory";
 import { SEO_SLUG_REDIRECTS } from "../lib/seo/slug-redirects";
 import { SITE_URL } from "../lib/constants";
@@ -15,9 +14,6 @@ import {
   getRegionRelatedLinks,
   getCaseTypeRelatedLinks,
 } from "../data/related-links";
-
-const SITEMAP_PATH = join(process.cwd(), "public", "sitemap.xml");
-const ROBOTS_PATH = join(process.cwd(), "public", "robots.txt");
 
 /** Appendix D minimum href requirements per profile slug */
 const PROFILE_MATRIX: Record<string, string[]> = {
@@ -63,25 +59,20 @@ const REQUIRED_BRIEF_REDIRECTS: Record<string, string> = {
   "/case-types/fgm-somalia": "/case-types/fgm-somalia-asylum",
 };
 
-function extractLocs(xml: string): string[] {
-  const locs: string[] = [];
-  const re = /<loc>([^<]+)<\/loc>/g;
-  let m: RegExpExecArray | null;
-  while ((m = re.exec(xml)) !== null) {
-    locs.push(m[1].trim());
-  }
-  return locs.sort();
-}
-
 function hrefs(links: { href: string }[]): string[] {
   return links.map((l) => l.href.split("#")[0]);
+}
+
+function hasEnquireLink(links: { href: string }[]): boolean {
+  return links.some((link) => link.href === "/contact" || link.href === "/#enquire");
 }
 
 function verifyInternalLinking(): string[] {
   const errors: string[] = [];
 
   for (const profile of asylumProfiles) {
-    const links = hrefs(getProfileRelatedLinks(profile.slug));
+    const relatedLinks = getProfileRelatedLinks(profile.slug);
+    const links = hrefs(relatedLinks);
     const required = PROFILE_MATRIX[profile.slug] ?? [];
     for (const path of required) {
       if (!links.includes(path)) {
@@ -91,8 +82,8 @@ function verifyInternalLinking(): string[] {
     if (!links.includes("/how-to-instruct")) {
       errors.push(`Profile ${profile.slug} missing /how-to-instruct`);
     }
-    if (!links.includes("/contact")) {
-      errors.push(`Profile ${profile.slug} missing /contact`);
+    if (!hasEnquireLink(relatedLinks)) {
+      errors.push(`Profile ${profile.slug} missing contact/enquire link`);
     }
   }
 
@@ -102,7 +93,6 @@ function verifyInternalLinking(): string[] {
     }
   }
 
-  // Smoke-test other link helpers resolve
   getGuideRelatedLinks("moj-framework-guide");
   getRegionRelatedLinks("mogadishu-return");
   getCaseTypeRelatedLinks("clan-minority-asylum");
@@ -122,44 +112,19 @@ function verifySlugRedirects(): string[] {
 
 function main() {
   let failed = false;
-
-  if (!existsSync(SITEMAP_PATH)) {
-    console.error(`Missing ${SITEMAP_PATH}. Run: npm run seo:generate`);
-    process.exit(1);
-  }
-  if (!existsSync(ROBOTS_PATH)) {
-    console.error(`Missing ${ROBOTS_PATH}. Run: npm run seo:generate`);
-    process.exit(1);
-  }
-
   const inventory = buildPublicUrlInventory(SITE_URL);
-  const expected = [...inventory.allUrls].sort();
-  const actual = extractLocs(readFileSync(SITEMAP_PATH, "utf-8"));
 
-  const missing = expected.filter((u) => !actual.includes(u));
-  const extra = actual.filter((u) => !expected.includes(u));
-
-  if (missing.length > 0) {
+  if (inventory.siteUrl.includes("://www.")) {
     failed = true;
-    console.error(`Sitemap missing ${missing.length} URL(s):`);
-    missing.forEach((u) => console.error(`  - ${u}`));
+    console.error(`SITE_URL must use apex host (no www): ${inventory.siteUrl}`);
   }
-  if (extra.length > 0) {
+  if (inventory.allUrls.some((u) => u.includes("://www."))) {
     failed = true;
-    console.error(`Sitemap has ${extra.length} unexpected URL(s):`);
-    extra.forEach((u) => console.error(`  + ${u}`));
+    console.error("Sitemap inventory must not contain www URLs (canonical host is apex).");
   }
-
-  const robots = readFileSync(ROBOTS_PATH, "utf-8");
-  if (!robots.includes(`Sitemap: ${inventory.siteUrl}/sitemap.xml`)) {
+  if (inventory.entries.length === 0) {
     failed = true;
-    console.error(`robots.txt missing correct Sitemap line for ${inventory.siteUrl}`);
-  }
-  for (const path of ["/thank-you", "/api/"]) {
-    if (!robots.includes(`Disallow: ${path}`)) {
-      failed = true;
-      console.error(`robots.txt missing Disallow: ${path}`);
-    }
+    console.error("Sitemap inventory is empty.");
   }
 
   const linkErrors = verifyInternalLinking();
@@ -182,7 +147,7 @@ function main() {
   }
 
   console.log(
-    `SEO verify OK: ${actual.length} sitemap URLs, internal linking matrix, and slug redirects.`
+    `SEO verify OK: ${inventory.entries.length} sitemap URLs on ${inventory.siteUrl}, internal linking matrix, and slug redirects.`
   );
 }
 

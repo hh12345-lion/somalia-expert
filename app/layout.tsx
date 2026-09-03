@@ -42,10 +42,10 @@ export const metadata: Metadata = {
       : undefined,
   },
   alternates: {
+    canonical: `${SITE_URL}/`,
     languages: {
-      "en-GB": SITE_URL,
-      "en-US": SITE_URL,
-      "x-default": SITE_URL,
+      "en-GB": `${SITE_URL}/`,
+      "x-default": `${SITE_URL}/`,
     },
   },
 };

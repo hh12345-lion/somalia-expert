@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { PageShell } from "@/components/layout/PageShell";
 import { PageJsonLd } from "@/components/seo/PageJsonLd";
 import { createMetadata } from "@/lib/metadata";
@@ -20,7 +21,11 @@ export default function QualificationsPage() {
         <p className="mt-4 text-[#4A5058] leading-relaxed">
           A qualified Somalia expert witness holds academic credentials (PhD, MA, or equivalent research background) in
           African Studies, Political Science, Anthropology, International Relations, or a related discipline. Field
-          research experience in Somalia, Somaliland, and Puntland is essential, not optional.
+          research experience in Somalia, Somaliland, and Puntland is essential, not optional. See{" "}
+          <Link href="/what-is-a-somalia-expert-witness" className="font-semibold text-[#7A3048] hover:underline">
+            what a Somalia expert witness does
+          </Link>{" "}
+          in UK tribunal proceedings.
         </p>
         <p className="mt-4 text-[#4A5058] leading-relaxed">
           Language expertise in Somali, Maay, and af-Tunni demonstrates the ability to assess conditions beyond

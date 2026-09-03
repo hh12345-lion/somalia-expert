@@ -4,7 +4,6 @@ import { FAQSection } from "@/components/ui/FAQSection";
 import { RelatedLinks } from "@/components/ui/RelatedLinks";
 import { PageJsonLd } from "@/components/seo/PageJsonLd";
 import { ResponsiveTableWrap } from "@/components/ui/ResponsiveTableWrap";
-import { JsonLd } from "@/components/ui/JsonLd";
 import { createMetadata } from "@/lib/metadata";
 import { articleSchema } from "@/lib/schema";
 import { mojFrameworkTable } from "@/data/cpin-data";
@@ -44,9 +43,10 @@ export default function MojCountryGuidancePage() {
 
   return (
     <>
-      <PageJsonLd breadcrumbs={crumbs} faqs={mojFaqs} />
-      <JsonLd
-        data={articleSchema({
+      <PageJsonLd
+        breadcrumbs={crumbs}
+        faqs={mojFaqs}
+        extra={articleSchema({
           title: "MOJ and Others (Return to Mogadishu) Somalia CG [2014]: A Complete Guide for UK Asylum Solicitors",
           description:
             "Complete guide to MOJ country guidance for Somalia asylum appeals including diaspora test, clan analysis, and 2025-2026 security updates.",

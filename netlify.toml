@@ -5,6 +5,25 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
+# Canonical host: apex only. www and http variants 301 to https://somaliaexpert.com
+[[redirects]]
+  from = "http://www.somaliaexpert.com/*"
+  to = "https://somaliaexpert.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.somaliaexpert.com/*"
+  to = "https://somaliaexpert.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://somaliaexpert.com/*"
+  to = "https://somaliaexpert.com/:splat"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/sitemap.xml"
   [headers.values]

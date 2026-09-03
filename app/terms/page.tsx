@@ -2,11 +2,9 @@ import { PageShell } from "@/components/layout/PageShell";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata = createMetadata({
-  title: "Terms of Use | SomaliaExpert",
-  description: "Terms of use for SomaliaExpert.com",
+  title: "Terms of Use | Somalia Expert",
+  description: "Terms of use for Somalia Expert — UK-only expert witness matching service.",
   path: "/terms",
-  noindex: true,
-  follow: true,
 });
 
 export default function TermsPage() {

@@ -20,13 +20,16 @@ export const APP_STATIC_PATHS: PublicUrlEntry[] = [
   { path: "/what-is-a-somalia-expert-witness", priority: 0.9, changefreq: "monthly" },
   { path: "/case-types", priority: 0.88, changefreq: "monthly" },
   { path: "/how-to-instruct", priority: 0.88, changefreq: "monthly" },
+  { path: "/contact", priority: 0.5, changefreq: "monthly" },
   { path: "/qualifications", priority: 0.88, changefreq: "monthly" },
   { path: "/guides", priority: 0.87, changefreq: "monthly" },
   { path: "/glossary", priority: 0.75, changefreq: "monthly" },
+  { path: "/privacy", priority: 0.3, changefreq: "yearly" },
+  { path: "/terms", priority: 0.3, changefreq: "yearly" },
   { path: "/cookie-policy", priority: 0.5, changefreq: "yearly" },
 ];
 
-export const NON_INDEXABLE_PATHS = ["/contact", "/thank-you", "/privacy", "/terms"] as const;
+export const NON_INDEXABLE_PATHS = ["/thank-you"] as const;
 
 export const ROBOTS_DISALLOW_PATHS = ["/thank-you", "/api/"] as const;
 
@@ -75,7 +78,7 @@ export function buildPublicUrlInventory(siteUrl: string = SITE_URL): PublicUrlIn
 
   const entries = [...byPath.values()].sort((a, b) => a.path.localeCompare(b.path));
   const allPaths = entries.map((e) => e.path);
-  const allUrls = allPaths.map((p) => (p === "/" ? origin : `${origin}${p}`));
+  const allUrls = allPaths.map((p) => (p === "/" ? `${origin}/` : `${origin}${p}`));
 
   return { siteUrl: origin, entries, allPaths, allUrls };
 }

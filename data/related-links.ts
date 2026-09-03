@@ -1,6 +1,7 @@
 export type RelatedLink = { label: string; href: string };
 
 const INSTRUCTION_LINKS: RelatedLink[] = [
+  { label: "What is a Somalia expert witness?", href: "/what-is-a-somalia-expert-witness" },
   { label: "How it works", href: "/how-to-instruct" },
   { label: "Enquire", href: "/#enquire" },
 ];
@@ -209,6 +210,7 @@ export function getMojRelatedLinks(): RelatedLink[] {
     { label: "All Asylum Profiles", href: "/asylum-profiles" },
     { label: "All Regions", href: "/regions" },
     { label: "All Guides", href: "/guides" },
+    { label: "What is a Somalia expert witness?", href: "/what-is-a-somalia-expert-witness" },
     { label: "How it works", href: "/how-to-instruct" },
     { label: "Enquire", href: "/#enquire" },
   ];

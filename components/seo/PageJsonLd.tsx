@@ -3,12 +3,13 @@ import {
   organizationSchema,
   breadcrumbSchema,
   faqSchema,
+  schemaGraph,
   type FAQ,
 } from "@/lib/schema";
 
 type Crumb = { label: string; href?: string };
 
-/** Standard SEO JSON-LD: Organization + optional Breadcrumb + FAQ */
+/** Standard SEO JSON-LD: Organization + optional Breadcrumb + FAQ in one @graph block. */
 export function PageJsonLd({
   breadcrumbs,
   faqs,
@@ -18,16 +19,15 @@ export function PageJsonLd({
   faqs?: FAQ[];
   extra?: object | object[];
 }) {
-  const schemas: object[] = [organizationSchema()];
+  const nodes: object[] = [organizationSchema()];
   if (breadcrumbs && breadcrumbs.length > 0) {
-    schemas.push(breadcrumbSchema(breadcrumbs));
+    nodes.push(breadcrumbSchema(breadcrumbs));
   }
   if (faqs && faqs.length > 0) {
-    schemas.push(faqSchema(faqs));
+    nodes.push(faqSchema(faqs));
   }
   if (extra) {
-    const items = Array.isArray(extra) ? extra : [extra];
-    schemas.push(...items);
+    nodes.push(...(Array.isArray(extra) ? extra : [extra]));
   }
-  return <JsonLd data={schemas} />;
+  return <JsonLd data={schemaGraph(...nodes)} />;
 }

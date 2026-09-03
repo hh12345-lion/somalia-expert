@@ -4,7 +4,6 @@ import { PageShell } from "@/components/layout/PageShell";
 import { FAQSection } from "@/components/ui/FAQSection";
 import { RelatedLinks } from "@/components/ui/RelatedLinks";
 import { PageJsonLd } from "@/components/seo/PageJsonLd";
-import { JsonLd } from "@/components/ui/JsonLd";
 import { createMetadata } from "@/lib/metadata";
 import { articleSchema } from "@/lib/schema";
 import { guides, getGuide } from "@/data/guides";
@@ -30,9 +29,10 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
 
   return (
     <>
-      <PageJsonLd breadcrumbs={crumbs} faqs={guide.faqs} />
-      <JsonLd
-        data={articleSchema({
+      <PageJsonLd
+        breadcrumbs={crumbs}
+        faqs={guide.faqs}
+        extra={articleSchema({
           title: guide.h1,
           description: guide.metaDescription,
           path,

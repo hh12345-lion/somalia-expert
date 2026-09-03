@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ContactForm } from "@/components/forms/ContactForm";
 import { JsonLd } from "@/components/ui/JsonLd";
-import { homepageGraph, websiteSchema } from "@/lib/schema";
+import { homepageGraph } from "@/lib/schema";
 import { asylumProfiles } from "@/data/asylum-profiles";
 import { regions } from "@/data/regions";
 import {
@@ -24,7 +24,7 @@ const featuredProfiles = featuredProfileSlugs
 export default function HomePage() {
   return (
     <>
-      <JsonLd data={[homepageGraph(), websiteSchema()]} />
+      <JsonLd data={homepageGraph()} />
 
       <div className="masthead-film h-28 sm:h-36" role="presentation" />
 
@@ -212,6 +212,12 @@ export default function HomePage() {
               className="inline-flex min-h-[44px] items-center px-2 text-sm font-semibold text-[#7A3048] hover:text-[#5E2438]"
             >
               Solicitor guides
+            </Link>
+            <Link
+              href="/what-is-a-somalia-expert-witness"
+              className="inline-flex min-h-[44px] items-center px-2 text-sm font-semibold text-[#7A3048] hover:text-[#5E2438]"
+            >
+              What is an expert witness?
             </Link>
           </div>
         </div>

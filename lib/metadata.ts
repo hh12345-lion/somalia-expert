@@ -27,7 +27,13 @@ export function createMetadata({
   return {
     title,
     description,
-    alternates: { canonical: url },
+    alternates: {
+      canonical: url,
+      languages: {
+        "en-GB": url,
+        "x-default": url,
+      },
+    },
     openGraph: {
       title,
       description,
@@ -40,6 +46,6 @@ export function createMetadata({
     twitter: { card: "summary_large_image", title, description },
     robots: noindex
       ? { index: false, follow, googleBot: { index: false, follow } }
-      : { index: true, follow: true },
+      : "index, follow",
   };
 }

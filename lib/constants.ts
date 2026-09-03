@@ -1,5 +1,17 @@
-export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || "https://www.somaliaexpert.com";
+/** Apex (non-www) is the live canonical host — www redirects at the edge. */
+function normalizeSiteUrl(raw?: string): string {
+  const fallback = "https://somaliaexpert.com";
+  const candidate = (raw?.trim() || fallback).replace(/\/$/, "");
+  try {
+    const parsed = new URL(candidate);
+    parsed.hostname = parsed.hostname.replace(/^www\./, "");
+    return parsed.origin;
+  } catch {
+    return fallback;
+  }
+}
+
+export const SITE_URL = normalizeSiteUrl(process.env.NEXT_PUBLIC_SITE_URL);
 export const SITE_NAME = "Somalia Expert";
 export const SITE_EMAIL = "cases@somaliaexpert.com";
 export const LINKEDIN_URL = "https://www.linkedin.com/company/SomaliaExpertWitness";

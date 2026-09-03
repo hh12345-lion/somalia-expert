@@ -11,7 +11,6 @@ import { guides } from "@/data/guides";
 import { asylumProfiles } from "@/data/asylum-profiles";
 import { HubLinkGrid } from "@/components/ui/HubLinkGrid";
 import { LEGAL_AID_SCOTLAND_SUMMARY, LEGAL_AID_ENGLAND_WALES_SUMMARY } from "@/lib/constants";
-import { JsonLd } from "@/components/ui/JsonLd";
 
 const cpinFaqs = [
   {
@@ -43,9 +42,10 @@ export default function CpinCountryGuidancePage() {
 
   return (
     <>
-      <PageJsonLd breadcrumbs={crumbs} faqs={cpinFaqs} />
-      <JsonLd
-        data={articleSchema({
+      <PageJsonLd
+        breadcrumbs={crumbs}
+        faqs={cpinFaqs}
+        extra={articleSchema({
           title: "Somalia CPIN & Country Guidance 2025-2026: A Guide for UK Asylum Solicitors",
           description:
             "Current Home Office CPINs and country guidance on Somalia for UK asylum practitioners.",
