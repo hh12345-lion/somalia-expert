@@ -15,9 +15,9 @@ export const regions: Region[] = [
   {
     slug: "mogadishu-return",
     title: "Mogadishu Return",
-    metaTitle: "Mogadishu Return Expert Witness UK | MOJ Framework",
+    metaTitle: "Mogadishu Return Expert Witness UK",
     metaDescription:
-      "Mogadishu return expert witness for UK asylum tribunals. MOJ country guidance, clan support requirement, diaspora test, Al-Shabaab security, and July 2025 CPIN analysis.",
+      "Mogadishu return expert witness for UK tribunals. MOJ guidance, clan support, diaspora test, Al-Shabaab security, and July 2025 CPIN analysis.",
     h1: "Mogadishu Return Expert Witness UK | MOJ Framework",
     content: [
       "Return to Mogadishu is governed by MOJ and Others (Return to Mogadishu) Somalia CG [2014] UKUT 004442, which remains the leading country guidance case for Somali asylum appeals in the UK. The tribunal assesses whether an individual with a particular profile faces a real risk of Article 3 ill-treatment on return to Mogadishu, taking account of clan connections, economic means, personal profile, and current security conditions.",
@@ -41,9 +41,9 @@ export const regions: Region[] = [
   {
     slug: "somaliland",
     title: "Somaliland",
-    metaTitle: "Somaliland Expert Witness UK | Asylum & Return Analysis",
+    metaTitle: "Somaliland Expert Witness UK",
     metaDescription:
-      "Somaliland expert witness for UK asylum tribunals. Separate legal framework from south/central Somalia, clan dynamics, security analysis, and internal relocation viability.",
+      "Somaliland expert witness for UK tribunals. Separate legal framework from south/central Somalia, clan dynamics, security, and internal relocation.",
     h1: "Somaliland Expert Witness UK | Asylum & Return Analysis",
     content: [
       "Somaliland, the self-declared republic in north-west Somalia, is assessed differently from south and central Somalia in UK asylum claims. It has a more stable political environment, a functioning government, and significantly lower Al-Shabaab presence than Mogadishu or the south. However, Somaliland is not formally recognised internationally, and specific profiles including clan minorities and political opponents face genuine risks.",
@@ -67,9 +67,9 @@ export const regions: Region[] = [
   {
     slug: "puntland",
     title: "Puntland",
-    metaTitle: "Puntland Expert Witness UK | Asylum & Security Analysis",
+    metaTitle: "Puntland Expert Witness UK",
     metaDescription:
-      "Puntland expert witness for UK asylum tribunals. Semi-autonomous status, Al-Shabaab and ISWAP-Somalia presence, Darood/Harti clan dynamics, and 2025-2026 security analysis.",
+      "Puntland expert witness for UK tribunals. Semi-autonomous status, Al-Shabaab and ISWAP presence, Darood/Harti clan dynamics, and 2025-2026 security.",
     h1: "Puntland Expert Witness UK | Asylum & Security Analysis",
     content: [
       "Puntland is a semi-autonomous region in north-east Somalia with its own government, security forces, and legal framework. It is generally more stable than south and central Somalia, but faces significant security challenges including increased Al-Shabaab and ISWAP-Somalia presence in recent years, ongoing clan violence, and piracy-related instability along the coast.",
@@ -93,9 +93,9 @@ export const regions: Region[] = [
   {
     slug: "south-central-somalia",
     title: "South/Central Somalia",
-    metaTitle: "South/Central Somalia Expert Witness UK | Asylum Analysis",
+    metaTitle: "South/Central Somalia Expert Witness UK",
     metaDescription:
-      "South and central Somalia expert witness for UK tribunals. Article 15(c) indiscriminate violence, Al-Shabaab territorial control 2025-2026, and internal displacement analysis.",
+      "South/central Somalia expert witness for UK tribunals. Article 15(c) violence, Al-Shabaab territorial control 2025-2026, and internal displacement.",
     h1: "South/Central Somalia Expert Witness UK | Asylum Analysis",
     content: [
       "South and central Somalia outside Mogadishu is governed by a different legal analysis from MOJ return claims: the Article 15(c) indiscriminate violence framework under the Qualification Directive. Al-Shabaab controls or contests large areas including lower Juba, Bay, Bakool, Middle Shabelle, and Lower Shabelle, with civilian casualty levels among the highest in the world.",

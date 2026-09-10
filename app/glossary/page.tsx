@@ -5,7 +5,7 @@ import { createMetadata } from "@/lib/metadata";
 import { glossaryTerms } from "@/data/glossary";
 
 export const metadata = createMetadata({
-  title: "Somalia Expert Witness Glossary | Key Terms for UK Legal Proceedings",
+  title: "Somalia Expert Witness Glossary",
   description:
     "Definitions of key Somalia expert witness and asylum law terms: MOJ, Al-Shabaab, CPIN, clan structure, ATMIS, Article 15(c), FGM, and more.",
   path: "/glossary",

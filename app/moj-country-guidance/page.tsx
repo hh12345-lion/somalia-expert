@@ -14,9 +14,9 @@ import { HubLinkGrid } from "@/components/ui/HubLinkGrid";
 import { getMojRelatedLinks } from "@/data/related-links";
 
 export const metadata = createMetadata({
-  title: "MOJ Somalia Country Guidance [2014] | UK Asylum Solicitor Guide 2025-2026",
+  title: "MOJ Somalia Country Guidance [2014]",
   description:
-    "Complete guide to MOJ and Others (Return to Mogadishu) Somalia CG [2014] for UK solicitors: clan analysis, diaspora test, Mogadishu return, Al-Shabaab, and 2025-2026 security updates.",
+    "Guide to MOJ and Others (Return to Mogadishu) Somalia CG [2014] for UK solicitors: clan analysis, diaspora test, Mogadishu return, and 2025-2026 security.",
   path: "/moj-country-guidance",
 });
 

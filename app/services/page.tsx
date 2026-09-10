@@ -12,9 +12,9 @@ import {
 } from "@/lib/constants";
 
 export const metadata = createMetadata({
-  title: "Somalia Expert Witness Services | Asylum & Immigration Tribunals",
+  title: "Somalia Expert Witness Services",
   description:
-    "Somalia expert witness services: country condition reports, clan analysis, Al-Shabaab risk assessment, FGM reports, MOJ framework, CPIN challenge, and oral evidence.",
+    "Somalia expert witness services: country reports, clan analysis, Al-Shabaab risk, FGM reports, MOJ framework, CPIN challenge, and oral evidence.",
   path: "/services",
 });
 

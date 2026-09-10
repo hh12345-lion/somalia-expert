@@ -12,9 +12,9 @@ export type Guide = {
 export const guides: Guide[] = [
   {
     slug: "moj-framework-guide",
-    metaTitle: "MOJ Framework for Somalia Returns | Solicitor's Guide 2025-2026",
+    metaTitle: "MOJ Framework for Somalia Returns",
     metaDescription:
-      "Complete solicitor's guide to the MOJ framework for Somalia returns. MOJ [2014] findings, OA [2022] updates, diaspora test, clan analysis, and 2025-2026 security updates.",
+      "Solicitor's guide to the MOJ framework for Somalia returns: MOJ [2014], OA [2022], diaspora test, clan analysis, and 2025-2026 security updates.",
     h1: "MOJ Framework for Somalia Returns: Complete Solicitor's Guide",
     sections: [
       {
@@ -48,7 +48,7 @@ export const guides: Guide[] = [
   },
   {
     slug: "clan-structure-somalia-guide",
-    metaTitle: "Somali Clan Structure | Expert Evidence Guide for Solicitors",
+    metaTitle: "Somali Clan Structure Guide",
     metaDescription:
       "Solicitor's guide to Somali clan structure for expert evidence. Major clans, minority groups, clan protection mechanisms, and expert assessment methodology.",
     h1: "Somali Clan Structure: Expert Evidence Guide for Solicitors",
@@ -76,7 +76,7 @@ export const guides: Guide[] = [
   },
   {
     slug: "al-shabaab-asylum-guide",
-    metaTitle: "Al-Shabaab Asylum Claims | Expert Evidence Guide 2025-2026",
+    metaTitle: "Al-Shabaab Asylum Claims Guide 2025",
     metaDescription:
       "Solicitor's guide to Al-Shabaab asylum claims. Renewed offensive impact, territory retaken, risk profiles, July 2025 CPIN analysis, and expert report structure.",
     h1: "Al-Shabaab Asylum Claims: Expert Evidence Guide 2025-2026",
@@ -104,9 +104,9 @@ export const guides: Guide[] = [
   },
   {
     slug: "somaliland-puntland-guide",
-    metaTitle: "Somaliland and Puntland Asylum Claims | Expert Evidence Guide",
+    metaTitle: "Somaliland & Puntland Asylum Guide",
     metaDescription:
-      "Expert evidence guide for Somaliland and Puntland asylum claims. Separate legal frameworks, clan requirements, security differences, and internal relocation analysis.",
+      "Expert evidence guide for Somaliland and Puntland asylum claims: separate legal frameworks, clan requirements, security differences, and relocation.",
     h1: "Somaliland and Puntland Asylum Claims: Expert Evidence Guide",
     sections: [
       {
@@ -131,7 +131,7 @@ export const guides: Guide[] = [
   },
   {
     slug: "fgm-somalia-guide",
-    metaTitle: "FGM Asylum Claims from Somalia | Expert Evidence Guide",
+    metaTitle: "FGM Asylum Claims from Somalia Guide",
     metaDescription:
       "Solicitor's guide to FGM asylum claims from Somalia. AMM [2011] country guidance, prevalence rates, daughter-at-risk claims, and state protection failures.",
     h1: "FGM Asylum Claims from Somalia: Expert Evidence Guide",
@@ -158,7 +158,7 @@ export const guides: Guide[] = [
   },
   {
     slug: "instructing-somalia-expert",
-    metaTitle: "Instructing a Somalia Expert Witness | Solicitor's Guide",
+    metaTitle: "Instructing a Somalia Expert Witness",
     metaDescription:
       "How to instruct a Somalia expert witness. Letter of instruction, documents needed, Legal Aid prior authority, and tribunal requirements for expert reports.",
     h1: "Instructing a Somalia Expert Witness: A Solicitor's Guide",

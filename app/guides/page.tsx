@@ -6,7 +6,7 @@ import { createMetadata } from "@/lib/metadata";
 import { guides } from "@/data/guides";
 
 export const metadata = createMetadata({
-  title: "Somalia Asylum Solicitor Guides | Expert Evidence Resources",
+  title: "Somalia Asylum Solicitor Guides",
   description:
     "Solicitor guides on MOJ framework, clan structure, Al-Shabaab, FGM, Somaliland/Puntland, and instructing Somalia expert witnesses for UK tribunals.",
   path: "/guides",

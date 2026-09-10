@@ -4,9 +4,9 @@ import { PageJsonLd } from "@/components/seo/PageJsonLd";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata = createMetadata({
-  title: "What Is a Somalia Expert Witness? | UK Immigration Tribunal Role",
+  title: "What Is a Somalia Expert Witness?",
   description:
-    "A Somalia expert witness provides independent country condition reports for UK immigration tribunals: clan structure, Al-Shabaab, MOJ framework, FGM, and Mogadishu return analysis.",
+    "A Somalia expert witness provides independent country reports for UK tribunals: clan structure, Al-Shabaab risk, MOJ framework, FGM, and Mogadishu return.",
   path: "/what-is-a-somalia-expert-witness",
 });
 

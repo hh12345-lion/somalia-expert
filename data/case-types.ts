@@ -14,9 +14,9 @@ export const caseTypes: CaseType[] = [
   {
     slug: "ftt-asylum-appeal-somalia",
     title: "FTT Asylum Appeal (Somalia)",
-    metaTitle: "Somalia FTT Asylum Appeal Expert Witness UK",
+    metaTitle: "Somalia FTT Asylum Appeal Expert UK",
     metaDescription:
-      "Somalia expert witness for First-tier Tribunal asylum appeals. MOJ country guidance, clan analysis, Al-Shabaab risk, and CPR Part 35 compliant country condition reports.",
+      "Somalia expert witness for First-tier Tribunal asylum appeals. MOJ guidance, clan analysis, Al-Shabaab risk, and CPR Part 35 country condition reports.",
     h1: "Somalia FTT Asylum Appeal Expert Witness UK",
     content: [
       "First-tier Tribunal asylum appeals involving Somali nationals require expert evidence addressing the appellant's specific profile against current country conditions. Somalia is one of the most legally complex asylum jurisdictions in the UK system, with MOJ country guidance, Article 15(c) analysis for south/central Somalia, and separate frameworks for Somaliland and Puntland.",
@@ -39,9 +39,9 @@ export const caseTypes: CaseType[] = [
   {
     slug: "upper-tribunal-somalia",
     title: "Upper Tribunal (Somalia)",
-    metaTitle: "Somalia Upper Tribunal Expert Witness UK",
+    metaTitle: "Somalia Upper Tribunal Expert UK",
     metaDescription:
-      "Somalia expert witness for Upper Tribunal appeals and country guidance cases. Updated analysis for MOJ framework, OA [2022], and 2025-2026 security developments.",
+      "Somalia expert witness for Upper Tribunal appeals and country guidance. Updated MOJ framework, OA [2022], and 2025-2026 security developments.",
     h1: "Somalia Upper Tribunal Expert Witness UK",
     content: [
       "Upper Tribunal proceedings involving Somali nationals often raise complex questions of country guidance application, including MOJ and Others [2014], OA and Others [2022], and AMM and Others [2011]. Expert evidence at UT level requires particularly rigorous sourcing and analysis given the precedential significance of UT decisions.",
@@ -64,9 +64,9 @@ export const caseTypes: CaseType[] = [
   {
     slug: "article-15c-south-central",
     title: "Article 15(c) South/Central Somalia",
-    metaTitle: "Article 15(c) South/Central Somalia Expert Witness UK",
+    metaTitle: "Article 15(c) South/Central Expert UK",
     metaDescription:
-      "Article 15(c) subsidiary protection expert witness for south and central Somalia. Indiscriminate violence analysis, Al-Shabaab territorial control, and 2025-2026 offensive impact.",
+      "Article 15(c) expert witness for south/central Somalia. Indiscriminate violence analysis, Al-Shabaab territorial control, and 2025-2026 offensive impact.",
     h1: "Article 15(c) South/Central Somalia Expert Witness UK",
     content: [
       "Article 15(c) of the Qualification Directive provides subsidiary protection where a person faces a serious and individual threat by reason of indiscriminate violence in situations of international or internal armed conflict. South and central Somalia outside Mogadishu falls within this framework rather than the MOJ individual risk assessment.",
@@ -89,7 +89,7 @@ export const caseTypes: CaseType[] = [
   {
     slug: "deportation-removal-somalia",
     title: "Deportation & Removal (Somalia)",
-    metaTitle: "Somalia Deportation & Removal Expert Witness UK",
+    metaTitle: "Somalia Deportation Expert Witness UK",
     metaDescription:
       "Somalia deportation and removal expert witness. MOJ diaspora test, failed asylum seeker return risk, and Article 3 challenges to removal to Somalia.",
     h1: "Somalia Deportation & Removal Expert Witness UK",
@@ -116,7 +116,7 @@ export const caseTypes: CaseType[] = [
     title: "Fresh Claims (Somalia)",
     metaTitle: "Somalia Fresh Claim Expert Witness UK",
     metaDescription:
-      "Somalia fresh claim expert witness for new asylum applications. Changed country conditions, Al-Shabaab offensive 2025-2026, and updated country guidance analysis.",
+      "Somalia fresh claim expert witness. Changed country conditions, Al-Shabaab offensive 2025-2026, and updated country guidance for new applications.",
     h1: "Somalia Fresh Claim Expert Witness UK",
     content: [
       "Fresh claims based on changed country conditions in Somalia may rely on Al-Shabaab's 2025-2026 offensive, ATMIS withdrawal, updated CPINs, and EUAA October 2025 country guidance. Expert evidence establishes that conditions have changed materially since the original decision, creating a realistic prospect of success.",
@@ -189,7 +189,7 @@ export const caseTypes: CaseType[] = [
   {
     slug: "clan-minority-asylum",
     title: "Clan Minority Asylum",
-    metaTitle: "Clan Minority Asylum Expert Witness UK | Somalia",
+    metaTitle: "Clan Minority Asylum Expert Witness UK",
     metaDescription:
       "Clan minority asylum expert witness for Somalia. Benadiri, Bantu, Gosha, Gaboye/Madhiban vulnerability, lack of clan protection, and MOJ diaspora test analysis.",
     h1: "Clan Minority Asylum Expert Witness UK | Somalia",

@@ -6,7 +6,7 @@ import { createMetadata } from "@/lib/metadata";
 import { caseTypes } from "@/data/case-types";
 
 export const metadata = createMetadata({
-  title: "Somalia Asylum Case Types | Expert Witness UK",
+  title: "Somalia Asylum Case Types UK",
   description:
     "Somalia expert witness evidence for FTT asylum appeals, Upper Tribunal, Article 15(c), FGM, Somaliland, clan minority, deportation, and fresh claims.",
   path: "/case-types",

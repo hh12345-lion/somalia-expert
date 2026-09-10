@@ -5,6 +5,7 @@ import { Footer } from "@/components/layout/Footer";
 import { CookieConsentProvider } from "@/components/cookies";
 import { ConsentDefaultsScript } from "@/components/cookies/ConsentDefaultsScript";
 import { SITE_URL } from "@/lib/constants";
+import { normalizeMetaDescription } from "@/lib/metadata";
 import "./globals.css";
 
 const karla = Karla({
@@ -29,12 +30,12 @@ export const viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default:
-      "Somalia Expert Witness UK | Country Reports for Asylum & Immigration Tribunals",
+    default: "Somalia Expert Witness UK | Asylum Reports",
     template: "%s | Somalia Expert",
   },
-  description:
-    "Find a qualified Somalia expert witness in the UK. Country condition reports for asylum appeals in England, Wales, Scotland, and Northern Ireland. SLAB and LAA Legal Aid compatible.",
+  description: normalizeMetaDescription(
+    "Find a qualified Somalia expert witness in the UK. Country condition reports for FTT and UT asylum appeals. SLAB and LAA Legal Aid compatible."
+  ),
   verification: {
     google: process.env.GOOGLE_SITE_VERIFICATION,
     other: process.env.BING_SITE_VERIFICATION

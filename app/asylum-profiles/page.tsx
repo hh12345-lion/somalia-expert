@@ -6,9 +6,9 @@ import { createMetadata } from "@/lib/metadata";
 import { asylumProfiles } from "@/data/asylum-profiles";
 
 export const metadata = createMetadata({
-  title: "Somali Asylum Profiles | Expert Witness Evidence UK",
+  title: "Somali Asylum Profiles UK",
   description:
-    "All major Somali asylum profiles covered by qualified expert witnesses: clan minorities, Al-Shabaab, FGM, failed asylum seekers, diaspora, former officials, and women.",
+    "Somali asylum profiles covered by expert witnesses: clan minorities, Al-Shabaab, FGM, failed asylum seekers, diaspora, former officials, and women.",
   path: "/asylum-profiles",
 });
 

@@ -2,7 +2,7 @@ import Link from "next/link";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata = createMetadata({
-  title: "Thank You | Somalia Expert",
+  title: "Thank You",
   description: "Your enquiry has been received.",
   path: "/thank-you",
   noindex: true,

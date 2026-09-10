@@ -10,9 +10,9 @@ import {
 } from "@/lib/constants";
 
 export const metadata = createMetadata({
-  title: "How to Instruct a Somalia Expert Witness UK | Step-by-Step Guide",
+  title: "How to Instruct a Somalia Expert",
   description:
-    "Step-by-step guide for UK solicitors on instructing a Somalia expert witness, including SLAB prior approval in Scotland and LAA prior authority in England and Wales.",
+    "Step-by-step guide for UK solicitors instructing a Somalia expert witness, with SLAB prior approval in Scotland and LAA prior authority in England and Wales.",
   path: "/how-to-instruct",
 });
 

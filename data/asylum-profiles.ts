@@ -15,9 +15,9 @@ export const asylumProfiles: AsylumProfile[] = [
   {
     slug: "clan-minority-groups",
     title: "Clan Minority Groups",
-    metaTitle: "Clan Minority Groups Expert Witness UK | Somalia Asylum",
+    metaTitle: "Clan Minority Groups Expert Witness UK",
     metaDescription:
-      "Clan minority expert witness for Somalia asylum claims in UK tribunals. Benadiri, Gosha, Bantu, Gaboye/Madhiban vulnerability, lack of clan protection, and Al-Shabaab risk.",
+      "Clan minority expert witness for UK Somalia asylum claims. Benadiri, Bantu, Gaboye/Madhiban vulnerability, lack of clan protection, and Al-Shabaab risk.",
     h1: "Clan Minority Groups Expert Witness UK | Somalia Asylum",
     content: [
       "Somalia's social protection system is organised around clan membership. Major clans including Hawiye, Darod, Dir, and Rahanweyn provide protection to their members through clan militias, political connections, and economic networks. Minority groups lack this protection and face severe discrimination, exploitation, and violence without recourse to effective state or non-state protection.",
@@ -41,9 +41,9 @@ export const asylumProfiles: AsylumProfile[] = [
   {
     slug: "al-shabaab-targeting",
     title: "Al-Shabaab Targeting",
-    metaTitle: "Al-Shabaab Targeting Expert Witness UK | Somalia Asylum",
+    metaTitle: "Al-Shabaab Targeting Expert Witness UK",
     metaDescription:
-      "Al-Shabaab targeting expert witness for UK asylum tribunals. Risk to government opponents, tax refusers, community leaders, and those perceived as supporting the Federal Government.",
+      "Al-Shabaab targeting expert witness for UK asylum tribunals. Risk to government opponents, tax refusers, community leaders, and those seen as backing the FGS.",
     h1: "Al-Shabaab Targeting Expert Witness UK | Somalia Asylum",
     content: [
       "Al-Shabaab operates as a parallel government across large parts of south-central Somalia, enforcing its ideology through taxation, forced recruitment, and targeted violence against those perceived as opponents. Only people seen as supportive of the government or opposed to Al-Shabaab may be at risk of persecution: peace activists, community leaders, clan elders, electoral delegates, cooperative businesspeople, or those refusing to pay Al-Shabaab taxes.",
@@ -67,9 +67,9 @@ export const asylumProfiles: AsylumProfile[] = [
   {
     slug: "fgm-gender-based-violence",
     title: "FGM & Gender-Based Violence",
-    metaTitle: "FGM & Gender-Based Violence Expert Witness UK | Somalia",
+    metaTitle: "FGM & GBV Expert Witness UK",
     metaDescription:
-      "FGM and gender-based violence expert witness for Somalia asylum claims. AMM [2011] country guidance, prevalence rates exceeding 98%, daughter-at-risk claims, and state protection failures.",
+      "FGM and gender-based violence expert witness for Somalia asylum. AMM [2011] guidance, high prevalence, daughter-at-risk claims, and state protection failures.",
     h1: "FGM & Gender-Based Violence Expert Witness UK | Somalia",
     content: [
       "Somalia has one of the highest rates of female genital mutilation in the world, with national surveys suggesting prevalence rates exceeding 98% in some communities. Despite formal legal prohibitions in some regions, enforcement is virtually non-existent and social pressure to undergo FGM remains overwhelming across all major clan groups.",
@@ -93,9 +93,9 @@ export const asylumProfiles: AsylumProfile[] = [
   {
     slug: "failed-asylum-seekers-return",
     title: "Failed Asylum Seekers Return",
-    metaTitle: "Failed Asylum Seekers Return Expert Witness UK | Somalia",
+    metaTitle: "Failed Asylum Seeker Return Expert UK",
     metaDescription:
-      "Failed asylum seeker return expert witness for Somalia. MOJ diaspora test, risk profile of Western returnees, UNHCR eligibility guidelines 2024, and Article 3 destitution analysis.",
+      "Failed asylum seeker return expert witness for Somalia. MOJ diaspora test, Western returnee risk, UNHCR 2024 guidelines, and Article 3 destitution analysis.",
     h1: "Failed Asylum Seekers Return Expert Witness UK | Somalia",
     content: [
       "Failed asylum seekers returned to Somalia face a distinct risk profile from those who have never left. MOJ and Others established that return to Mogadishu requires assessment of clan connections and diaspora financial support: without either, the individual may face conditions reaching the Article 3 threshold through destitution and inability to meet basic needs.",
@@ -119,9 +119,9 @@ export const asylumProfiles: AsylumProfile[] = [
   {
     slug: "diaspora-without-clan-support",
     title: "Diaspora Without Clan Support",
-    metaTitle: "Somalia Diaspora Without Clan Support Expert Witness UK",
+    metaTitle: "Diaspora Without Clan Support Expert UK",
     metaDescription:
-      "Expert witness for Somali diaspora without clan support in Mogadishu. MOJ remittances test, Article 3 destitution risk, and Hashi and Others long-absence analysis.",
+      "Expert witness for Somali diaspora without clan support. MOJ remittances test, Article 3 destitution risk, and Hashi long-absence analysis in Mogadishu.",
     h1: "Somalia Diaspora Without Clan Support Expert Witness UK",
     content: [
       "In Mogadishu, clan membership provides access to housing, employment, security, and social networks. Those who have lost clan connections through long absence abroad, or who belong to minority clans without established networks in Mogadishu, face extreme difficulty on return: unable to find housing or employment, vulnerable to exploitation and violence, and potentially destitute.",
@@ -145,9 +145,9 @@ export const asylumProfiles: AsylumProfile[] = [
   {
     slug: "former-government-officials",
     title: "Former Government Officials",
-    metaTitle: "Former Government Officials Expert Witness UK | Somalia",
+    metaTitle: "Former Government Officials Expert UK",
     metaDescription:
-      "Former Somali government officials expert witness for UK tribunals. TFG, FGS, and regional administration risk, Al-Shabaab targeting, and security personnel vulnerability.",
+      "Former Somali government officials expert witness for UK tribunals. TFG/FGS risk, Al-Shabaab targeting, and security personnel vulnerability on return.",
     h1: "Former Government Officials Expert Witness UK | Somalia",
     content: [
       "Former officials of the Transitional Federal Government, Federal Government of Somalia, or regional administrations face targeted Al-Shabaab risk on return. Those with security, judicial, or political profiles that would mark them as opponents of Al-Shabaab ideology are at particular risk, regardless of MOJ's general finding that ordinary Mogadishu civilians face no real risk from Al-Shabaab forced recruitment.",
@@ -171,9 +171,9 @@ export const asylumProfiles: AsylumProfile[] = [
   {
     slug: "women-discriminatory-practices",
     title: "Women Facing Discriminatory Practices",
-    metaTitle: "Women Facing Discriminatory Practices Expert Witness UK | Somalia",
+    metaTitle: "Women Facing Discrimination Expert UK",
     metaDescription:
-      "Expert witness for Somali women facing discriminatory practices. Gender-based persecution, forced marriage, honour-based violence, and Al-Shabaab restrictions on women.",
+      "Expert witness for Somali women facing discriminatory practices: gender persecution, forced marriage, honour violence, and Al-Shabaab restrictions.",
     h1: "Women Facing Discriminatory Practices Expert Witness UK | Somalia",
     content: [
       "Women in Somalia face multiple forms of gender-based discrimination and persecution including FGM, forced marriage, domestic violence, and in Al-Shabaab controlled areas, severe restrictions on movement, dress, and behaviour enforced through violence. State protection for women is extremely limited across all regions.",
@@ -197,9 +197,9 @@ export const asylumProfiles: AsylumProfile[] = [
   {
     slug: "forced-recruitment-conscription",
     title: "Al-Shabaab Forced Recruitment",
-    metaTitle: "Al-Shabaab Forced Recruitment Expert Witness UK | Somalia",
+    metaTitle: "Al-Shabaab Forced Recruitment Expert UK",
     metaDescription:
-      "Al-Shabaab forced recruitment and conscription expert witness for UK tribunals. Refugee Convention persecution, child soldiers, escape risk, and internal relocation analysis.",
+      "Al-Shabaab forced recruitment expert witness for UK tribunals. Refugee Convention persecution, child soldiers, escape risk, and internal relocation.",
     h1: "Al-Shabaab Forced Recruitment Expert Witness UK | Somalia",
     content: [
       "Al-Shabaab operates as a parallel government across large parts of south-central Somalia. Forced recruitment constitutes persecution under the 1951 Refugee Convention for those who refuse or escape conscription. Claims based on refusal of recruitment, escape from Al-Shabaab, or fear of forced conscription deserve serious and careful consideration.",

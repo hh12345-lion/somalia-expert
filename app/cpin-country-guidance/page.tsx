@@ -31,9 +31,9 @@ const cpinFaqs = [
 ];
 
 export const metadata = createMetadata({
-  title: "Somalia CPIN & Country Guidance 2025-2026 | UK Asylum Solicitor Guide",
+  title: "Somalia CPIN & Country Guidance 2025",
   description:
-    "Current Home Office CPINs and country guidance on Somalia for UK asylum practitioners: MOJ [2014], OA [2022], AMM [2011], Al-Shabaab, Mogadishu, and EUAA October 2025.",
+    "Current Home Office CPINs and Somalia country guidance for UK practitioners: MOJ [2014], OA [2022], AMM [2011], Al-Shabaab, Mogadishu, and EUAA 2025.",
   path: "/cpin-country-guidance",
 });
 

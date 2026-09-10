@@ -6,9 +6,9 @@ import { createMetadata } from "@/lib/metadata";
 import { regions } from "@/data/regions";
 
 export const metadata = createMetadata({
-  title: "Somalia Regions Expert Witness UK | Mogadishu, Somaliland, Puntland",
+  title: "Somalia Regions Expert Witness UK",
   description:
-    "Regional expert witness analysis for Somalia asylum claims. Mogadishu MOJ framework, Somaliland, Puntland, and south/central Article 15(c) analysis for UK tribunals.",
+    "Regional expert witness analysis for Somalia asylum claims: Mogadishu MOJ framework, Somaliland, Puntland, and south/central Article 15(c).",
   path: "/regions",
 });
 

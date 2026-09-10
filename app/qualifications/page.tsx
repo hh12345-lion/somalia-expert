@@ -4,9 +4,9 @@ import { PageJsonLd } from "@/components/seo/PageJsonLd";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata = createMetadata({
-  title: "Somalia Expert Witness Qualifications UK | Credentials & Standards",
+  title: "Somalia Expert Witness Qualifications",
   description:
-    "What qualifications should a Somalia expert witness hold? Somali language expertise, field research, clan structure knowledge, UNHCR experience, and tribunal acceptance.",
+    "What qualifications should a Somalia expert witness hold? Somali language, field research, clan knowledge, UNHCR experience, and tribunal acceptance.",
   path: "/qualifications",
 });
 
