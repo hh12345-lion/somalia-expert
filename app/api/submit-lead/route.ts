@@ -35,7 +35,18 @@ export async function POST(request: Request) {
   const email = (body.email ?? "").toLowerCase().trim();
   const phone = sanitize(body.phone ?? "");
   const organisation = sanitize(body.organisation ?? "");
-  const summary = sanitize(body.summary ?? "");
+  const summary = sanitize(
+    body.summary ??
+      body.message ??
+      (body as { Message?: string }).Message ??
+      (body as { description?: string }).description ??
+      (body as { enquiry?: string }).enquiry ??
+      (body as { details?: string }).details ??
+      (body as { notes?: string }).notes ??
+      (body as { matter?: string }).matter ??
+      ""
+  );
+  const message = sanitize(body.message ?? summary);
 
   if (!fullName || !email) {
     return NextResponse.json({ error: "fullName and email are required" }, { status: 400 });
@@ -82,6 +93,7 @@ export async function POST(request: Request) {
       phone,
       organisation,
       summary,
+      message,
     });
     try {
       const res = await fetch(webhookUrl, {
