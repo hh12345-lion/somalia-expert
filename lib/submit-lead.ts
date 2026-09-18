@@ -15,6 +15,7 @@ export type SubmitLeadInput = {
   phone: string;
   organisation?: string;
   summary?: string;
+  message?: string;
 };
 
 export type SubmitLeadPayload = SubmitLeadInput & {
@@ -36,6 +37,7 @@ export function buildLeadWebhookPayload(input: SubmitLeadInput) {
     "Case note": (input.summary ?? "").trim(),
     "Brand name": LEAD_BRAND_NAME,
     domain: getSiteDomain(),
+    message: input.message ?? input.summary ?? "",
   };
 }
 
