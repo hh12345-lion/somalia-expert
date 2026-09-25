@@ -25,6 +25,9 @@ export function Footer() {
           <Link href="/terms" className="inline-flex min-h-[44px] items-center hover:text-[#1C1F24]">
             Terms
           </Link>
+          <Link href="/blog" className="inline-flex min-h-[44px] items-center hover:text-[#1C1F24]">
+            Blog
+          </Link>
           <CookieSettingsButton variant="footer" />
           <Link href="/#enquire" className="inline-flex min-h-[44px] items-center font-semibold text-[#7A3048] hover:text-[#5E2438]">
             Enquire
