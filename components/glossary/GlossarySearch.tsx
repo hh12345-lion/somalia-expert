@@ -23,7 +23,7 @@ export function GlossarySearch({ terms }: { terms: GlossaryTerm[] }) {
         placeholder="Search terms…"
         value={q}
         onChange={(e) => setQ(e.target.value)}
-        className="mb-8 w-full max-w-md rounded-[8px] border border-[#D4D8DE] px-4 py-3 min-h-[44px] focus:border-[#1C1F24] focus:outline-none focus:ring-1 focus:ring-[#1C1F24]"
+        className="mb-8 w-full max-w-md rounded-[8px] border border-[#C6CCDC] px-4 py-3 min-h-[44px] focus:border-[#29324D] focus:outline-none focus:ring-1 focus:ring-[#29324D]"
       />
       <dl className="space-y-6">
         {filtered.map((t) => {
@@ -32,17 +32,17 @@ export function GlossarySearch({ terms }: { terms: GlossaryTerm[] }) {
             <div
               key={t.slug}
               id={t.slug}
-              className="scroll-mt-24 rounded-[8px] border border-[#D4D8DE] bg-white p-4 sm:p-5"
+              className="scroll-mt-24 rounded-[8px] border border-[#C6CCDC] bg-white p-4 sm:p-5"
             >
-              <dt className="break-words font-semibold text-[#1C1F24]">{t.term}</dt>
-              <dd className="mt-2 break-words text-[#4A5058] leading-relaxed">{t.definition}</dd>
+              <dt className="break-words font-semibold text-[#29324D]">{t.term}</dt>
+              <dd className="mt-2 break-words text-[#4B5168] leading-relaxed">{t.definition}</dd>
               {related.length > 0 && (
-                <dd className="mt-4 flex flex-wrap gap-x-4 gap-y-2 border-t border-[#D4D8DE] pt-4">
+                <dd className="mt-4 flex flex-wrap gap-x-4 gap-y-2 border-t border-[#C6CCDC] pt-4">
                   {related.map((link) => (
                     <Link
                       key={link.href}
                       href={link.href}
-                      className="inline-flex min-h-[44px] items-center text-sm font-medium text-[#7A3048] hover:underline"
+                      className="inline-flex min-h-[44px] items-center text-sm font-medium text-[#29324D] hover:underline"
                     >
                       {link.label}
                     </Link>

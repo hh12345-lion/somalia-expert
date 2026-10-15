@@ -1,3 +1,4 @@
+import { sectionPhotos } from "@/lib/page-photos";
 import { PageShell } from "@/components/layout/PageShell";
 import { createMetadata } from "@/lib/metadata";
 import { SITE_EMAIL, SITE_SCOPE } from "@/lib/constants";
@@ -11,24 +12,24 @@ export const metadata = createMetadata({
 
 export default function PrivacyPage() {
   return (
-    <PageShell title="Privacy Policy" breadcrumbs={[{ label: "Home", href: "/" }, { label: "Privacy" }]}>
-      <p className="text-[#4A5058] leading-relaxed">
+    <PageShell photo={sectionPhotos.legal} title="Privacy Policy" breadcrumbs={[{ label: "Home", href: "/" }, { label: "Privacy" }]}>
+      <p className="text-[#4B5168] leading-relaxed">
         SomaliaExpert.com is operated to connect UK solicitors with qualified Somalia expert witnesses. We collect
         personal data submitted through our contact form (name, law firm, email, phone, and case details) solely to
         respond to instruction requests and match appropriate experts.
       </p>
-      <p className="mt-4 text-sm text-[#4A5058] leading-relaxed">{SITE_SCOPE}</p>
-      <p className="mt-4 text-[#4A5058] leading-relaxed">
+      <p className="mt-4 text-sm text-[#4B5168] leading-relaxed">{SITE_SCOPE}</p>
+      <p className="mt-4 text-[#4B5168] leading-relaxed">
         Contact form submissions are stored securely and retained only as long as necessary to fulfil your request.
         We do not sell personal data. You may request deletion by emailing {SITE_EMAIL}. Non-essential tracking
         scripts load only after you grant consent via our cookie banner. See our{" "}
-        <a href="/cookie-policy" className="font-semibold text-[#7A3048] hover:underline">
+        <a href="/cookie-policy" className="font-semibold text-[#29324D] hover:underline">
           Cookie Policy
         </a>
         .
       </p>
-      <h2 className="mt-8 text-lg font-bold text-[#1C1F24]">Your Rights (GDPR)</h2>
-      <p className="mt-4 text-[#4A5058] leading-relaxed">
+      <h2 className="mt-8 text-lg font-bold text-[#29324D]">Your Rights (GDPR)</h2>
+      <p className="mt-4 text-[#4B5168] leading-relaxed">
         You have the right to access, rectify, erase, restrict processing, and port your personal data. You may
         withdraw consent for non-essential cookies at any time via Cookie Settings in the footer. To exercise your
         rights, contact {SITE_EMAIL}.

@@ -1,3 +1,4 @@
+import { sectionPhotos } from "@/lib/page-photos";
 import Link from "next/link";
 import { PageShell } from "@/components/layout/PageShell";
 import { CardGrid } from "@/components/ui/CardGrid";
@@ -18,12 +19,12 @@ export default function AsylumProfilesPage() {
   return (
     <>
       <PageJsonLd breadcrumbs={crumbs} />
-      <PageShell
+      <PageShell photo={sectionPhotos.profiles}
         title="Somali Asylum Profiles"
         subtitle="Dedicated expert witness evidence for each major Somali asylum profile in UK immigration tribunals."
         breadcrumbs={crumbs}
       >
-        <p className="mb-8 text-[#4A5058] leading-relaxed">
+        <p className="mb-8 text-[#4B5168] leading-relaxed">
           Somalia is one of the most legally complex asylum jurisdictions in the UK system. Each profile below links to
           a dedicated page with country guidance analysis, CPIN references, and profile-specific expert evidence
           guidance for solicitors and Legal Aid practitioners.
@@ -35,9 +36,9 @@ export default function AsylumProfilesPage() {
             href: `/asylum-profiles/${p.slug}`,
           }))}
         />
-        <p className="mt-8 text-[#4A5058]">
+        <p className="mt-8 text-[#4B5168]">
           For MOJ country guidance analysis, see our{" "}
-          <Link href="/moj-country-guidance" className="font-semibold text-[#7A3048] hover:underline">
+          <Link href="/moj-country-guidance" className="font-semibold text-[#29324D] hover:underline">
             MOJ country guidance pillar page
           </Link>
           .

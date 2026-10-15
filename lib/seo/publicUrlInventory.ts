@@ -28,6 +28,7 @@ export const APP_STATIC_PATHS: PublicUrlEntry[] = [
   { path: "/glossary", priority: 0.75, changefreq: "monthly" },
   { path: "/privacy", priority: 0.3, changefreq: "yearly" },
   { path: "/terms", priority: 0.3, changefreq: "yearly" },
+  { path: "/image-credits", priority: 0.2, changefreq: "yearly" },
   { path: "/cookie-policy", priority: 0.5, changefreq: "yearly" },
 ];
 

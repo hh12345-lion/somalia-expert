@@ -1,3 +1,4 @@
+import { sectionPhotos } from "@/lib/page-photos";
 import Link from "next/link";
 import { PageShell } from "@/components/layout/PageShell";
 import { FAQSection } from "@/components/ui/FAQSection";
@@ -52,37 +53,37 @@ export default function CpinCountryGuidancePage() {
           path: "/cpin-country-guidance",
         })}
       />
-      <PageShell
+      <PageShell photo={sectionPhotos.cpin}
         title="Somalia CPIN & Country Guidance 2025-2026: A Guide for UK Asylum Solicitors"
         subtitle="Current Home Office CPINs, country guidance cases, and the expert witness role beyond generic country policy."
         breadcrumbs={crumbs}
       >
-        <p className="text-[#4A5058] leading-relaxed">
+        <p className="text-[#4B5168] leading-relaxed">
           Somalia is one of the most legally complex asylum jurisdictions in the UK system. Multiple layers of country
           guidance (MOJ [2014], OA [2022], AMM [2011]), updated CPINs, and rapidly evolving security conditions make
           current expert knowledge essential for both solicitors and expert witnesses.
         </p>
 
-        <h2 className="mt-10 text-xl font-bold text-[#1C1F24]">Current Somalia CPINs</h2>
+        <h2 className="mt-10 text-xl font-bold text-[#29324D]">Current Somalia CPINs</h2>
         <div className="mt-4">
           <ResponsiveTableWrap>
             <table className="w-full min-w-[600px] border-collapse text-sm">
-              <caption className="mb-3 text-left text-base font-semibold text-[#1C1F24]">
+              <caption className="mb-3 text-left text-base font-semibold text-[#29324D]">
                 Somalia CPIN quick reference for UK asylum practitioners (2025-2026)
               </caption>
               <thead>
-                <tr className="border-b border-[#D4D8DE] bg-[#ECEEF1]">
-                  <th className="px-4 py-3 text-left font-semibold text-[#1C1F24]">CPIN</th>
-                  <th className="px-4 py-3 text-left font-semibold text-[#1C1F24]">Date</th>
-                  <th className="px-4 py-3 text-left font-semibold text-[#1C1F24]">Key Issue</th>
+                <tr className="border-b border-[#C6CCDC] bg-[#E0E5EF]">
+                  <th className="px-4 py-3 text-left font-semibold text-[#29324D]">CPIN</th>
+                  <th className="px-4 py-3 text-left font-semibold text-[#29324D]">Date</th>
+                  <th className="px-4 py-3 text-left font-semibold text-[#29324D]">Key Issue</th>
                 </tr>
               </thead>
               <tbody>
                 {currentCpins.map((row) => (
-                  <tr key={row.title} className="border-b border-[#D4D8DE]">
-                    <td className="px-4 py-3 text-[#4A5058]">{row.title}</td>
-                    <td className="px-4 py-3 text-[#4A5058]">{row.date}</td>
-                    <td className="px-4 py-3 text-[#4A5058]">{row.keyIssue}</td>
+                  <tr key={row.title} className="border-b border-[#C6CCDC]">
+                    <td className="px-4 py-3 text-[#4B5168]">{row.title}</td>
+                    <td className="px-4 py-3 text-[#4B5168]">{row.date}</td>
+                    <td className="px-4 py-3 text-[#4B5168]">{row.keyIssue}</td>
                   </tr>
                 ))}
               </tbody>
@@ -90,39 +91,39 @@ export default function CpinCountryGuidancePage() {
           </ResponsiveTableWrap>
         </div>
 
-        <h2 className="mt-10 text-xl font-bold text-[#1C1F24]">Country Guidance Cases</h2>
+        <h2 className="mt-10 text-xl font-bold text-[#29324D]">Country Guidance Cases</h2>
         <ul className="mt-4 space-y-4">
           {countryGuidanceCases.map((cg) => (
-            <li key={cg.citation} className="rounded-[8px] border border-[#D4D8DE] bg-[#ECEEF1] p-4">
-              <p className="font-semibold text-[#1C1F24]">{cg.citation}</p>
-              <p className="mt-1 text-sm text-[#4A5058]">{cg.summary}</p>
+            <li key={cg.citation} className="rounded-[8px] border border-[#C6CCDC] bg-[#E0E5EF] p-4">
+              <p className="font-semibold text-[#29324D]">{cg.citation}</p>
+              <p className="mt-1 text-sm text-[#4B5168]">{cg.summary}</p>
             </li>
           ))}
         </ul>
-        <p className="mt-4 text-[#4A5058]">
+        <p className="mt-4 text-[#4B5168]">
           For a detailed analysis of MOJ [2014], see our{" "}
-          <Link href="/moj-country-guidance" className="font-semibold text-[#7A3048] hover:underline">
+          <Link href="/moj-country-guidance" className="font-semibold text-[#29324D] hover:underline">
             MOJ country guidance pillar page
           </Link>
           .
         </p>
 
-        <h2 className="mt-10 text-xl font-bold text-[#1C1F24]">July 2025 Mogadishu Security CPIN</h2>
-        <p className="mt-4 text-[#4A5058] leading-relaxed">
+        <h2 className="mt-10 text-xl font-bold text-[#29324D]">July 2025 Mogadishu Security CPIN</h2>
+        <p className="mt-4 text-[#4B5168] leading-relaxed">
           The July 2025 CPIN on Mogadishu: Al-Shabaab and Security Situation confirms that the Federal Government of
           Somalia is willing but unable to provide effective protection from Al-Shabaab. Car bomb attacks and
           assassinations remain common. This CPIN is central to MOJ framework analysis and Al-Shabaab targeting claims.
         </p>
 
-        <h2 className="mt-10 text-xl font-bold text-[#1C1F24]">EUAA Country Guidance October 2025</h2>
-        <p className="mt-4 text-[#4A5058] leading-relaxed">
+        <h2 className="mt-10 text-xl font-bold text-[#29324D]">EUAA Country Guidance October 2025</h2>
+        <p className="mt-4 text-[#4B5168] leading-relaxed">
           The EUAA updated its Country Guidance on Somalia in October 2025, revising the actors of protection chapter.
           UK tribunals may consider EUAA guidance alongside Home Office CPINs, particularly on state protection
           availability and internal relocation viability.
         </p>
 
-        <h2 className="mt-10 text-xl font-bold text-[#1C1F24]">How Expert Reports Relate to CPINs</h2>
-        <p className="mt-4 text-[#4A5058] leading-relaxed">
+        <h2 className="mt-10 text-xl font-bold text-[#29324D]">How Expert Reports Relate to CPINs</h2>
+        <p className="mt-4 text-[#4B5168] leading-relaxed">
           Expert witnesses do not simply reproduce CPIN content. The expert&apos;s role is to provide independent,
           objective analysis of whether the appellant&apos;s specific profile creates a real risk, applying current field
           research and source citations beyond the CPIN. Where the CPIN supports the appellant, the expert confirms and
@@ -130,17 +131,17 @@ export default function CpinCountryGuidancePage() {
           evidence.
         </p>
 
-        <h2 className="mt-10 text-xl font-bold text-[#1C1F24]">Legal Aid and Expert Reports</h2>
-        <p className="mt-4 text-[#4A5058] leading-relaxed">
+        <h2 className="mt-10 text-xl font-bold text-[#29324D]">Legal Aid and Expert Reports</h2>
+        <p className="mt-4 text-[#4B5168] leading-relaxed">
           Most Somalia expert reports in UK asylum proceedings are Legal Aid funded. Scottish solicitors obtain prior
           approval from the Scottish Legal Aid Board (SLAB) before instructing country experts for tribunal hearings,
           including those listed in Glasgow and Edinburgh.
         </p>
-        <p className="mt-4 text-[#4A5058] leading-relaxed">{LEGAL_AID_SCOTLAND_SUMMARY}</p>
-        <p className="mt-4 text-[#4A5058] leading-relaxed">{LEGAL_AID_ENGLAND_WALES_SUMMARY}</p>
-        <p className="mt-4 text-[#4A5058] leading-relaxed">
+        <p className="mt-4 text-[#4B5168] leading-relaxed">{LEGAL_AID_SCOTLAND_SUMMARY}</p>
+        <p className="mt-4 text-[#4B5168] leading-relaxed">{LEGAL_AID_ENGLAND_WALES_SUMMARY}</p>
+        <p className="mt-4 text-[#4B5168] leading-relaxed">
           See our{" "}
-          <Link href="/how-to-instruct" className="font-semibold text-[#7A3048] hover:underline">
+          <Link href="/how-to-instruct" className="font-semibold text-[#29324D] hover:underline">
             how to instruct guide
           </Link>{" "}
           for SLAB and LAA prior approval steps.

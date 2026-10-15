@@ -1,24 +1,36 @@
 @import "tailwindcss";
 
+/* Brand palette: navy #29324D, peach #FFC399, slate #757B93, mist #C6CCDC, pale #E0E5EF. */
 @theme inline {
-  --color-ink: #1c1f24;
-  --color-ink-soft: #2a3038;
-  --color-dusk: #3d4a5c;
-  --color-wine: #7a3048;
-  --color-wine-deep: #5e2438;
-  --color-mist: #eceef1;
-  --color-paper: #f3f4f6;
-  --color-border: #d4d8de;
-  --color-body: #4a5058;
-  --color-primary: #1c1f24;
-  --color-accent: #7a3048;
-  --color-section-alt: #eceef1;
-  --font-sans: var(--font-karla);
-  --font-display: var(--font-cormorant);
-  --radius-card: 14px;
-  --radius-sm: 8px;
-  --shadow-card: 0 18px 40px -24px rgba(28, 31, 36, 0.35);
+  --color-navy: #29324d;
+  --color-navy-deep: #1c2338;
+  --color-peach: #ffc399;
+  --color-peach-soft: #ffe3cf;
+  --color-slate: #757b93;
+  --color-mistline: #c6ccdc;
+  --color-pale: #e0e5ef;
+  --color-ink: #29324d;
+  --color-ink-soft: #343e5c;
+  --color-dusk: #757b93;
+  --color-wine: #29324d;
+  --color-wine-deep: #1c2338;
+  --color-mist: #e0e5ef;
+  --color-paper: #f4f6fa;
+  --color-border: #c6ccdc;
+  --color-body: #4b5168;
+  --color-primary: #29324d;
+  --color-accent: #29324d;
+  --color-section-alt: #e0e5ef;
+  --font-sans: var(--font-cormorant);
+  --font-display: var(--font-funnel);
+  --radius-card: 18px;
+  --radius-sm: 10px;
+  --shadow-card: 0 18px 40px -24px rgba(41, 50, 77, 0.35);
   --breakpoint-xs: 375px;
+  /* Cormorant Garamond reads small, so the small text sizes are stepped up. */
+  --text-xs: 0.85rem;
+  --text-sm: 1rem;
+  --text-base: 1.125rem;
 }
 
 html {
@@ -29,7 +41,8 @@ html {
 body {
   background: var(--color-paper);
   color: var(--color-body);
-  font-family: var(--font-karla), system-ui, sans-serif;
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-size: 1.125rem;
   overflow-x: hidden;
   min-width: 320px;
 }
@@ -40,19 +53,29 @@ section {
 }
 
 .font-display {
-  font-family: var(--font-cormorant), Georgia, "Times New Roman", serif;
+  font-family: var(--font-funnel), ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: -0.015em;
 }
 
-.masthead-film {
-  background-color: var(--color-ink);
-  background-image: linear-gradient(90deg, rgba(28, 31, 36, 0.55), rgba(28, 31, 36, 0.15)),
-    url("/images/hero-coast.jpg");
-  background-size: cover;
-  background-position: center 42%;
+/* Small label in Funnel Sans capitals, led by a half disc of the monogram. */
+.disc-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-funnel), ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #29324d;
 }
 
-.panel-dusk {
-  background: linear-gradient(165deg, #2f3948 0%, #1c1f24 70%);
+.disc-label::before {
+  content: "";
+  width: 0.95rem;
+  height: 0.95rem;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #29324d 0 50%, #ffc399 50% 100%);
 }
 
 @keyframes slideUp {
@@ -83,11 +106,13 @@ section {
   -webkit-overflow-scrolling: touch;
 }
 
-img,
-video,
-svg {
-  max-width: 100%;
-  height: auto;
+@layer base {
+  img,
+  video,
+  svg {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 .prose-safe {
@@ -113,8 +138,8 @@ svg {
 }
 
 .prose-content h2 {
-  color: #1c1f24;
-  font-family: var(--font-display), Georgia, serif;
+  color: #29324d;
+  font-family: var(--font-funnel), ui-sans-serif, sans-serif;
   font-size: 1.5rem;
   font-weight: 600;
   margin-top: 2rem;
@@ -122,8 +147,8 @@ svg {
 }
 
 .prose-content h3 {
-  color: #1c1f24;
-  font-family: var(--font-display), Georgia, serif;
+  color: #29324d;
+  font-family: var(--font-funnel), ui-sans-serif, sans-serif;
   font-size: 1.25rem;
   font-weight: 600;
   margin-top: 1.5rem;
@@ -133,14 +158,14 @@ svg {
 .prose-content p {
   margin-bottom: 1rem;
   line-height: 1.75;
-  color: #4a5058;
+  color: #4B5168;
 }
 
 .prose-content ul,
 .prose-content ol {
   margin-bottom: 1rem;
   padding-left: 1.5rem;
-  color: #4a5058;
+  color: #4B5168;
 }
 
 .prose-content li {
@@ -149,16 +174,70 @@ svg {
 }
 
 .prose-content a {
-  color: #7a3048;
+  color: #29324D;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
 
 .prose-content a:hover {
-  color: #5e2438;
+  color: #1C2338;
 }
 
 .prose-content strong {
-  color: #1c1f24;
+  color: #29324D;
   font-weight: 600;
+}
+
+.prose-content ul {
+  list-style: disc;
+}
+
+.prose-content ol {
+  list-style: decimal;
+}
+
+.prose-content li::marker {
+  color: #e8a072;
+}
+
+/* Header: CSS only menus so the whole header renders on the server. */
+.nav-panel {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(6px);
+  pointer-events: none;
+  transition:
+    opacity 150ms ease,
+    transform 150ms ease,
+    visibility 150ms;
+}
+
+.nav-item:hover .nav-panel,
+.nav-item:focus-within .nav-panel {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.nav-item:hover .nav-chevron,
+.nav-item:focus-within .nav-chevron {
+  transform: rotate(180deg);
+}
+
+#mobile-menu {
+  max-height: min(80vh, 40rem);
+  overflow-y: auto;
+}
+
+details.fold > summary {
+  list-style: none;
+}
+
+details.fold > summary::-webkit-details-marker {
+  display: none;
+}
+
+details.fold[open] .fold-chevron {
+  transform: rotate(180deg);
 }

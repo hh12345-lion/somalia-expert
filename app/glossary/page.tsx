@@ -1,3 +1,4 @@
+import { sectionPhotos } from "@/lib/page-photos";
 import { PageShell } from "@/components/layout/PageShell";
 import { GlossarySearch } from "@/components/glossary/GlossarySearch";
 import { PageJsonLd } from "@/components/seo/PageJsonLd";
@@ -21,7 +22,7 @@ export default function GlossaryPage() {
   return (
     <>
       <PageJsonLd breadcrumbs={crumbs} faqs={faqItems} />
-      <PageShell
+      <PageShell photo={sectionPhotos.glossary}
         title="Somalia Expert Witness & Asylum Law Glossary"
         subtitle="30 definition-first terms for UK immigration practitioners."
         breadcrumbs={crumbs}

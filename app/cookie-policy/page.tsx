@@ -1,3 +1,4 @@
+import { sectionPhotos } from "@/lib/page-photos";
 import Link from "next/link";
 import { PageShell } from "@/components/layout/PageShell";
 import { PageJsonLd } from "@/components/seo/PageJsonLd";
@@ -18,42 +19,42 @@ export default function CookiePolicyPage() {
   return (
     <>
       <PageJsonLd breadcrumbs={crumbs} />
-      <PageShell title="Cookie Policy" subtitle="Last updated: June 2026" breadcrumbs={crumbs}>
-        <p className="text-[#4A5058] leading-relaxed">
+      <PageShell photo={sectionPhotos.legal} title="Cookie Policy" subtitle="Last updated: June 2026" breadcrumbs={crumbs}>
+        <p className="text-[#4B5168] leading-relaxed">
           This Cookie Policy explains how SomaliaExpert.com (&quot;we&quot;, &quot;us&quot;) uses
           cookies and similar technologies when you visit our website. It should be read alongside
           our{" "}
-          <Link href="/privacy" className="font-semibold text-[#7A3048] hover:underline">
+          <Link href="/privacy" className="font-semibold text-[#29324D] hover:underline">
             Privacy Policy
           </Link>
           . We comply with the UK GDPR, the Privacy and Electronic Communications Regulations
           (PECR), and apply CCPA-aligned transparency for California visitors.
         </p>
 
-        <h2 className="mt-10 text-xl font-bold text-[#1C1F24]">What are cookies?</h2>
-        <p className="mt-4 text-[#4A5058] leading-relaxed">
+        <h2 className="mt-10 text-xl font-bold text-[#29324D]">What are cookies?</h2>
+        <p className="mt-4 text-[#4B5168] leading-relaxed">
           Cookies are small text files stored on your device when you visit a website. We also use
           local storage to remember your cookie consent choices (with a 12-month expiry) and may
           load third-party tags only after you grant consent.
         </p>
 
-        <h2 className="mt-10 text-xl font-bold text-[#1C1F24]">Google Consent Mode</h2>
-        <p className="mt-4 text-[#4A5058] leading-relaxed">
+        <h2 className="mt-10 text-xl font-bold text-[#29324D]">Google Consent Mode</h2>
+        <p className="mt-4 text-[#4B5168] leading-relaxed">
           Before you make a choice, we set Google Consent Mode v2 defaults that deny analytics,
           advertising, and personalization storage. When you accept or customise preferences, we
           update consent signals immediately so Google tags respect your choices.
         </p>
 
-        <h2 className="mt-10 text-xl font-bold text-[#1C1F24]">Cookie categories</h2>
+        <h2 className="mt-10 text-xl font-bold text-[#29324D]">Cookie categories</h2>
         <div className="mt-4 space-y-4">
           {(Object.keys(CATEGORY_META) as Array<keyof typeof CATEGORY_META>).map((key) => {
             const meta = CATEGORY_META[key];
             return (
-              <section key={key} className="rounded-[8px] border border-[#D4D8DE] bg-[#ECEEF1] p-4">
-                <h3 className="font-semibold text-[#1C1F24]">{meta.label}</h3>
-                <p className="mt-2 text-sm text-[#4A5058]">{meta.description}</p>
+              <section key={key} className="rounded-[8px] border border-[#C6CCDC] bg-[#E0E5EF] p-4">
+                <h3 className="font-semibold text-[#29324D]">{meta.label}</h3>
+                <p className="mt-2 text-sm text-[#4B5168]">{meta.description}</p>
                 {meta.required && (
-                  <p className="mt-2 text-xs font-medium uppercase tracking-wide text-[#7A3048]">
+                  <p className="mt-2 text-xs font-medium uppercase tracking-wide text-[#29324D]">
                     Always active
                   </p>
                 )}
@@ -62,45 +63,45 @@ export default function CookiePolicyPage() {
           })}
         </div>
 
-        <h2 className="mt-10 text-xl font-bold text-[#1C1F24]">Third-party services</h2>
-        <p className="mt-4 text-[#4A5058] leading-relaxed">
+        <h2 className="mt-10 text-xl font-bold text-[#29324D]">Third-party services</h2>
+        <p className="mt-4 text-[#4B5168] leading-relaxed">
           Depending on your consent choices, we may load:
         </p>
-        <ul className="mt-4 list-disc space-y-2 pl-6 text-[#4A5058]">
+        <ul className="mt-4 list-disc space-y-2 pl-6 text-[#4B5168]">
           <li>Google Analytics and Google Tag Manager (analytics)</li>
           <li>Meta Pixel (marketing)</li>
           <li>LinkedIn Insight Tag (marketing)</li>
           <li>Hotjar (analytics and experience insights)</li>
         </ul>
-        <p className="mt-4 text-sm text-[#4A5058]">
+        <p className="mt-4 text-sm text-[#4B5168]">
           These providers may process data outside the UK. We do not load non-essential scripts until
           you opt in via our cookie banner.
         </p>
 
-        <h2 className="mt-10 text-xl font-bold text-[#1C1F24]">Your choices</h2>
-        <p className="mt-4 text-[#4A5058] leading-relaxed">
+        <h2 className="mt-10 text-xl font-bold text-[#29324D]">Your choices</h2>
+        <p className="mt-4 text-[#4B5168] leading-relaxed">
           On your first visit you can Accept All, Reject Non-Essential, or Customize Preferences.
           Change your mind anytime using Cookie Settings in the website footer. Consent is stored in
           your browser for up to 12 months, after which we will ask again.
         </p>
 
-        <h2 className="mt-10 text-xl font-bold text-[#1C1F24]">California residents (CCPA)</h2>
-        <p className="mt-4 text-[#4A5058] leading-relaxed">
+        <h2 className="mt-10 text-xl font-bold text-[#29324D]">California residents (CCPA)</h2>
+        <p className="mt-4 text-[#4B5168] leading-relaxed">
           We do not sell personal information. Non-essential cookies used for analytics or marketing
           are disabled until you provide consent. You may withdraw consent at any time via Cookie
           Settings.
         </p>
 
-        <h2 className="mt-10 text-xl font-bold text-[#1C1F24]">Browser controls</h2>
-        <p className="mt-4 text-[#4A5058] leading-relaxed">
+        <h2 className="mt-10 text-xl font-bold text-[#29324D]">Browser controls</h2>
+        <p className="mt-4 text-[#4B5168] leading-relaxed">
           You can block or delete cookies through your browser settings. Blocking necessary cookies
           may prevent us from remembering your consent preferences.
         </p>
 
-        <h2 className="mt-10 text-xl font-bold text-[#1C1F24]">Contact</h2>
-        <p className="mt-4 text-[#4A5058] leading-relaxed">
+        <h2 className="mt-10 text-xl font-bold text-[#29324D]">Contact</h2>
+        <p className="mt-4 text-[#4B5168] leading-relaxed">
           Questions about cookies:{" "}
-          <a href={`mailto:${SITE_EMAIL}`} className="font-semibold text-[#7A3048] hover:underline">
+          <a href={`mailto:${SITE_EMAIL}`} className="font-semibold text-[#29324D] hover:underline">
             {SITE_EMAIL}
           </a>
         </p>

@@ -1,19 +1,16 @@
+import { PageHero } from "@/components/ui/PageHero";
+import { sectionPhotos } from "@/lib/page-photos";
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CTASection } from "@/components/ui/CTASection";
 import { PageJsonLd } from "@/components/seo/PageJsonLd";
-import { getBlogBySlug, getBlogSlugs } from "@/lib/blog";
+import { getBlogBySlug } from "@/lib/blog";
 import { SITE_NAME, SITE_URL } from "@/lib/constants";
 import { markdownToHtml } from "@/lib/markdown";
 import { createMetadata } from "@/lib/metadata";
 
 type Props = { params: Promise<{ slug: string }> };
-
-export async function generateStaticParams() {
-  return getBlogSlugs().map((slug) => ({ slug }));
-}
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
@@ -84,56 +81,33 @@ export default async function BlogPostPage({ params }: Props) {
           url,
         }}
       />
-      {post.image ? (
-        <div className="relative mx-auto h-[min(28rem,55vw)] w-full max-w-6xl border-b border-[#D4D8DE]">
-          <Image
-            src={post.image}
-            alt={post.imageAlt || post.title}
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover"
-          />
-        </div>
-      ) : null}
+      <PageHero
+        title={post.title}
+        subtitle={post.description}
+        photo={{ src: post.image || sectionPhotos.blog.src, alt: post.image ? post.imageAlt || post.title : sectionPhotos.blog.alt }}
+        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Blog", href: "/blog" }, { label: "Article" }]}
+      />
 
-      <article className="prose-content mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8">
-        <nav aria-label="Breadcrumb" className="mb-6 not-prose text-sm text-[#4A5058]">
-          <Link href="/" className="hover:text-[#7A3048]">
-            Home
-          </Link>
-          {" / "}
-          <Link href="/blog" className="hover:text-[#7A3048]">
-            Blog
-          </Link>
-          {" / "}
-          <span className="text-[#1C1F24]">{post.title}</span>
-        </nav>
-
-        <p className="not-prose text-[11px] font-semibold uppercase tracking-widest text-[#4A5058]">
-          <time dateTime={post.updated || post.date}>
+      <article className="prose-content mx-auto max-w-3xl border-t border-mistline px-4 py-14 sm:px-6 lg:px-8">
+        <p className="not-prose mb-8 flex flex-wrap items-center gap-x-3 font-display text-sm text-slate">
+          <time dateTime={post.updated || post.date} className="font-semibold text-navy">
             {new Date(post.updated || post.date).toLocaleDateString("en-GB", {
               day: "numeric",
               month: "long",
               year: "numeric",
             })}
           </time>
-          <span className="mx-2">·</span>
-          <span className="normal-case tracking-normal">{post.readingTime}</span>
+          <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-peach" />
+          <span>{post.readingTime}</span>
         </p>
-        <h1 className="mt-3 font-display text-3xl font-semibold leading-tight text-[#1C1F24] sm:text-4xl">
-          {post.title}
-        </h1>
-        <p className="mt-4 text-lg text-[#4A5058]">{post.description}</p>
-
         <div className="mt-10" dangerouslySetInnerHTML={{ __html: html }} />
 
-        <p className="not-prose mt-12 border-t border-[#D4D8DE] pt-8 text-sm">
-          <Link href="/blog" className="font-semibold text-[#7A3048] hover:text-[#5E2438]">
-            ← Back to the blog
+        <p className="not-prose mt-12 border-t border-[#C6CCDC] pt-8 text-sm">
+          <Link href="/blog" className="font-semibold text-[#29324D] hover:text-[#1C2338]">
+            Back to the blog
           </Link>
-          <span className="mx-3 text-[#4A5058]/50">·</span>
-          <Link href="/how-to-instruct" className="font-semibold text-[#7A3048] hover:text-[#5E2438]">
+          <span className="mx-3 text-[#4B5168]/50">·</span>
+          <Link href="/how-to-instruct" className="font-semibold text-[#29324D] hover:text-[#1C2338]">
             How to instruct
           </Link>
         </p>

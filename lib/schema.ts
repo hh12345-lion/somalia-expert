@@ -44,6 +44,8 @@ export function organizationSchema() {
     name: SITE_NAME,
     url: HOMEPAGE_URL,
     email: SITE_EMAIL,
+    logo: `${SITE_URL}/brand/icon-512.png`,
+    image: `${SITE_URL}/brand/og.png`,
     address: { "@type": "PostalAddress", addressCountry: "GB" },
     areaServed: { "@type": "Country", name: "United Kingdom" },
     sameAs: [LINKEDIN_URL],

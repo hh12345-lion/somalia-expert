@@ -1,3 +1,4 @@
+import { sectionPhotos } from "@/lib/page-photos";
 import Link from "next/link";
 import { PageShell } from "@/components/layout/PageShell";
 import { PageJsonLd } from "@/components/seo/PageJsonLd";
@@ -65,33 +66,33 @@ export default function HowToInstructPage() {
   return (
     <>
       <PageJsonLd breadcrumbs={crumbs} />
-      <PageShell
+      <PageShell photo={sectionPhotos.howToInstruct}
         title="How to Instruct a Somalia Expert Witness"
         subtitle="Eight steps for UK immigration solicitors, with Scottish Legal Aid (SLAB) and England/Wales (LAA) funding routes."
         breadcrumbs={crumbs}
       >
-        <p className="mb-8 max-w-3xl text-[#4A5058] leading-relaxed">{SITE_SCOPE}</p>
+        <p className="mb-8 max-w-3xl text-[#4B5168] leading-relaxed">{SITE_SCOPE}</p>
 
         <div className="space-y-6">
           {steps.map((s) => (
-            <div key={s.n} className="flex gap-4 rounded-[8px] border border-[#D4D8DE] bg-white p-4 sm:p-6">
-              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#1C1F24] font-bold text-white">
+            <div key={s.n} className="flex gap-4 rounded-[8px] border border-[#C6CCDC] bg-white p-4 sm:p-6">
+              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#29324D] font-bold text-white">
                 {s.n}
               </span>
               <div className="min-w-0">
-                <h2 className="break-words font-bold text-[#1C1F24]">{s.title}</h2>
-                <p className="prose-safe mt-2 text-sm text-[#4A5058] sm:text-base">{s.body}</p>
+                <h2 className="break-words font-bold text-[#29324D]">{s.title}</h2>
+                <p className="prose-safe mt-2 text-sm text-[#4B5168] sm:text-base">{s.body}</p>
               </div>
             </div>
           ))}
         </div>
 
-        <div className="mt-10 rounded-[8px] border border-[#D4D8DE] bg-[#ECEEF1] p-4 sm:p-6">
-          <h2 className="text-lg font-bold text-[#1C1F24]">Legal Aid summary: Scotland and England/Wales</h2>
-          <h3 className="mt-4 font-semibold text-[#1C1F24]">Scotland (SLAB)</h3>
-          <p className="prose-safe mt-2 text-sm text-[#4A5058] sm:text-base">{LEGAL_AID_SCOTLAND_SUMMARY}</p>
-          <h3 className="mt-4 font-semibold text-[#1C1F24]">England and Wales (LAA)</h3>
-          <p className="prose-safe mt-2 text-sm text-[#4A5058] sm:text-base">{LEGAL_AID_ENGLAND_WALES_SUMMARY}</p>
+        <div className="mt-10 rounded-[8px] border border-[#C6CCDC] bg-[#E0E5EF] p-4 sm:p-6">
+          <h2 className="text-lg font-bold text-[#29324D]">Legal Aid summary: Scotland and England/Wales</h2>
+          <h3 className="mt-4 font-semibold text-[#29324D]">Scotland (SLAB)</h3>
+          <p className="prose-safe mt-2 text-sm text-[#4B5168] sm:text-base">{LEGAL_AID_SCOTLAND_SUMMARY}</p>
+          <h3 className="mt-4 font-semibold text-[#29324D]">England and Wales (LAA)</h3>
+          <p className="prose-safe mt-2 text-sm text-[#4B5168] sm:text-base">{LEGAL_AID_ENGLAND_WALES_SUMMARY}</p>
         </div>
 
         <RelatedLinks
@@ -103,7 +104,7 @@ export default function HowToInstructPage() {
         />
         <Link
           href="/#enquire"
-          className="mt-8 inline-flex min-h-[44px] items-center rounded-full bg-[#7A3048] px-6 py-3 font-semibold text-white"
+          className="mt-8 inline-flex min-h-[44px] items-center rounded-full bg-[#29324D] px-6 py-3 font-semibold text-white"
         >
           Enquire
         </Link>

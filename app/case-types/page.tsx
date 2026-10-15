@@ -1,3 +1,4 @@
+import { sectionPhotos } from "@/lib/page-photos";
 import Link from "next/link";
 import { PageShell } from "@/components/layout/PageShell";
 import { CardGrid } from "@/components/ui/CardGrid";
@@ -18,12 +19,12 @@ export default function CaseTypesPage() {
   return (
     <>
       <PageJsonLd breadcrumbs={crumbs} />
-      <PageShell
+      <PageShell photo={sectionPhotos.caseTypes}
         title="Somalia Asylum Case Types"
         subtitle="Expert witness evidence for all major UK immigration tribunal proceedings involving Somali nationals."
         breadcrumbs={crumbs}
       >
-        <p className="mb-8 text-[#4A5058] leading-relaxed">
+        <p className="mb-8 text-[#4B5168] leading-relaxed">
           SomaliaExpert provides qualified country expert witnesses for First-tier Tribunal appeals, Upper Tribunal
           proceedings, Article 15(c) south/central Somalia claims, FGM asylum, Somaliland analysis, clan minority
           claims, deportation and removal, and fresh claims with updated country guidance.
@@ -35,13 +36,13 @@ export default function CaseTypesPage() {
             href: `/case-types/${c.slug}`,
           }))}
         />
-        <p className="mt-8 text-[#4A5058]">
+        <p className="mt-8 text-[#4B5168]">
           See also our{" "}
-          <Link href="/asylum-profiles" className="font-semibold text-[#7A3048] hover:underline">
+          <Link href="/asylum-profiles" className="font-semibold text-[#29324D] hover:underline">
             asylum profiles hub
           </Link>{" "}
           and{" "}
-          <Link href="/regions" className="font-semibold text-[#7A3048] hover:underline">
+          <Link href="/regions" className="font-semibold text-[#29324D] hover:underline">
             regional analysis pages
           </Link>
           .

@@ -1,3 +1,4 @@
+import { sectionPhotos } from "@/lib/page-photos";
 import Link from "next/link";
 import { PageShell } from "@/components/layout/PageShell";
 import { CardGrid } from "@/components/ui/CardGrid";
@@ -18,12 +19,12 @@ export default function GuidesPage() {
   return (
     <>
       <PageJsonLd breadcrumbs={crumbs} />
-      <PageShell
+      <PageShell photo={sectionPhotos.guides}
         title="Solicitor Guides: Somalia Expert Evidence"
         subtitle="Practical guides for UK immigration solicitors instructing Somalia country expert witnesses."
         breadcrumbs={crumbs}
       >
-        <p className="mb-8 text-[#4A5058] leading-relaxed">
+        <p className="mb-8 text-[#4B5168] leading-relaxed">
           These guides cover MOJ country guidance, clan structure analysis, Al-Shabaab risk assessment, FGM claims,
           regional analysis for Somaliland and Puntland, and the instruction process for Legal Aid and privately funded
           cases.
@@ -35,9 +36,9 @@ export default function GuidesPage() {
             href: `/guides/${g.slug}`,
           }))}
         />
-        <p className="mt-8 text-[#4A5058]">
+        <p className="mt-8 text-[#4B5168]">
           For MOJ country guidance analysis, see our{" "}
-          <Link href="/moj-country-guidance" className="font-semibold text-[#7A3048] hover:underline">
+          <Link href="/moj-country-guidance" className="font-semibold text-[#29324D] hover:underline">
             MOJ country guidance pillar page
           </Link>
           .

@@ -1,3 +1,4 @@
+import { sectionPhotos } from "@/lib/page-photos";
 import Link from "next/link";
 import { PageShell } from "@/components/layout/PageShell";
 import { CardGrid } from "@/components/ui/CardGrid";
@@ -18,12 +19,12 @@ export default function RegionsHubPage() {
   return (
     <>
       <PageJsonLd breadcrumbs={crumbs} />
-      <PageShell
+      <PageShell photo={sectionPhotos.regions}
         title="Somalia Regional Expert Witness Analysis"
         subtitle="Somalia's legal framework differs radically by region. Dedicated expert analysis for each jurisdiction."
         breadcrumbs={crumbs}
       >
-        <p className="mb-8 text-[#4A5058] leading-relaxed">
+        <p className="mb-8 text-[#4B5168] leading-relaxed">
           UK asylum tribunals assess Somalia claims differently depending on the appellant&apos;s region of origin.
           Mogadishu is governed by the MOJ country guidance framework. South and central Somalia outside Mogadishu
           falls under Article 15(c) indiscriminate violence analysis. Somaliland and Puntland require separate regional
@@ -36,9 +37,9 @@ export default function RegionsHubPage() {
             href: `/regions/${r.slug}`,
           }))}
         />
-        <p className="mt-8 text-[#4A5058]">
+        <p className="mt-8 text-[#4B5168]">
           For the MOJ framework governing Mogadishu return, see our{" "}
-          <Link href="/moj-country-guidance" className="font-semibold text-[#7A3048] hover:underline">
+          <Link href="/moj-country-guidance" className="font-semibold text-[#29324D] hover:underline">
             MOJ country guidance pillar page
           </Link>
           .

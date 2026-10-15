@@ -1,15 +1,12 @@
+import { photoFor } from "@/lib/page-photos";
 import { notFound } from "next/navigation";
 import { PageShell } from "@/components/layout/PageShell";
 import { FAQSection } from "@/components/ui/FAQSection";
 import { RelatedLinks } from "@/components/ui/RelatedLinks";
 import { PageJsonLd } from "@/components/seo/PageJsonLd";
 import { createMetadata } from "@/lib/metadata";
-import { caseTypes, getCaseType } from "@/data/case-types";
+import { getCaseType } from "@/data/case-types";
 import { getCaseTypeRelatedLinks } from "@/data/related-links";
-
-export function generateStaticParams() {
-  return caseTypes.map((c) => ({ slug: c.slug }));
-}
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
@@ -28,9 +25,9 @@ export default async function CaseTypePage({ params }: { params: Promise<{ slug:
   return (
     <>
       <PageJsonLd breadcrumbs={crumbs} faqs={ct.faqs} />
-      <PageShell title={ct.h1} breadcrumbs={crumbs}>
+      <PageShell photo={photoFor(slug)} title={ct.h1} breadcrumbs={crumbs}>
         {ct.content.map((p, i) => (
-          <p key={i} className="mb-4 text-[#4A5058] leading-relaxed">
+          <p key={i} className="mb-4 text-[#4B5168] leading-relaxed">
             {p}
           </p>
         ))}

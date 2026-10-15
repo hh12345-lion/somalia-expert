@@ -36,7 +36,7 @@ export function normalizeMetaDescription(description: string): string {
 const OG_IMAGE_ALT = "Somalia Expert - Expert Witness Services UK";
 
 export const OPEN_GRAPH_IMAGE = {
-  url: `${SITE_URL}/opengraph-image`,
+  url: `${SITE_URL}/brand/og.png`,
   width: 1200,
   height: 630,
   alt: OG_IMAGE_ALT,

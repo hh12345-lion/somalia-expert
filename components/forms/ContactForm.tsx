@@ -7,8 +7,8 @@ import { postSubmitLead } from "@/lib/submit-lead";
 import { submitNetlifyForm } from "@/lib/submitNetlifyForm";
 
 const inputClass =
-  "w-full min-w-0 rounded-lg border border-[#D4D8DE] bg-white px-3 py-2.5 text-base text-[#1C1F24] placeholder:text-[#4A5058]/50 focus:border-[#7A3048] focus:outline-none focus:ring-2 focus:ring-[#7A3048]/20 min-h-[44px]";
-const labelClass = "mb-1.5 block text-sm font-medium text-[#1C1F24]";
+  "w-full min-w-0 rounded-lg border border-[#C6CCDC] bg-white px-3 py-2.5 text-base text-[#29324D] placeholder:text-[#4B5168]/50 focus:border-[#29324D] focus:outline-none focus:ring-2 focus:ring-[#29324D]/20 min-h-[44px]";
+const labelClass = "mb-1.5 block text-sm font-medium text-[#29324D]";
 
 export function ContactForm({ idPrefix = "enquiry" }: { idPrefix?: string }) {
   const router = useRouter();
@@ -112,7 +112,7 @@ export function ContactForm({ idPrefix = "enquiry" }: { idPrefix?: string }) {
       <button
         type="submit"
         disabled={status === "loading"}
-        className="inline-flex min-h-[48px] w-full items-center justify-center rounded-full bg-[#7A3048] px-6 text-base font-semibold text-white transition hover:bg-[#5E2438] disabled:opacity-60"
+        className="inline-flex min-h-[48px] w-full items-center justify-center rounded-full bg-[#29324D] px-6 text-base font-semibold text-white transition hover:bg-[#1C2338] disabled:opacity-60"
       >
         {status === "loading" ? "Sending…" : "Send enquiry"}
       </button>

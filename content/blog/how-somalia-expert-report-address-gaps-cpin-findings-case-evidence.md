@@ -1,6 +1,6 @@
 ---
 title: "How a Somalia Expert Report Can Address Gaps Between CPIN Findings and Case-Specific Evidence"
-description: "How a Somalia country expert report can address gaps between CPIN findings and case-specific evidence — regional, clan, and individual circumstances in asylum claims."
+description: "How a Somalia country expert report can address gaps between CPIN findings and case-specific evidence, regional, clan, and individual circumstances in asylum claims."
 date: "2026-09-25"
 updated: "2026-09-25"
 image: "/images/blog/how-somalia-expert-report-address-gaps-cpin-findings-case-evidence.webp"

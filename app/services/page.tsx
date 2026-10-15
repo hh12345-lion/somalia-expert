@@ -1,3 +1,4 @@
+import { sectionPhotos } from "@/lib/page-photos";
 import Link from "next/link";
 import { PageShell } from "@/components/layout/PageShell";
 import { CardGrid } from "@/components/ui/CardGrid";
@@ -29,38 +30,38 @@ export default function ServicesPage() {
           services.map((s) => ({ id: s.id, name: s.title, description: s.description }))
         )}
       />
-      <PageShell
+      <PageShell photo={sectionPhotos.services}
         title="Somalia Expert Witness Services"
         subtitle="CPR Part 35 and Immigration Tribunal Practice Direction compliant reports for all major Somali asylum profiles."
         breadcrumbs={crumbs}
       >
-        <p className="mb-4 text-[#4A5058] leading-relaxed">
+        <p className="mb-4 text-[#4B5168] leading-relaxed">
           SomaliaExpert provides eight specialist expert witness services for UK immigration solicitors, law firms, and
           Legal Aid practitioners in England, Wales, Scotland, and Northern Ireland. All reports are prepared by
           qualified Somalia country experts with current CPIN knowledge, MOJ framework expertise, and field research
           experience in Somalia, Somaliland, and Puntland.
         </p>
-        <p className="mb-8 text-sm text-[#4A5058] leading-relaxed">{SITE_SCOPE}</p>
+        <p className="mb-8 text-sm text-[#4B5168] leading-relaxed">{SITE_SCOPE}</p>
         <CardGrid
           items={services.map((s) => ({
             title: s.title,
             description: s.description,
           }))}
         />
-        <h2 className="mt-12 text-xl font-bold text-[#1C1F24]">Legal Aid: Scotland (SLAB) and England/Wales (LAA)</h2>
-        <p className="mt-4 max-w-3xl text-[#4A5058] leading-relaxed">{LEGAL_AID_SCOTLAND_SUMMARY}</p>
-        <p className="mt-4 max-w-3xl text-[#4A5058] leading-relaxed">{LEGAL_AID_ENGLAND_WALES_SUMMARY}</p>
-        <p className="mt-8 text-[#4A5058]">
+        <h2 className="mt-12 text-xl font-bold text-[#29324D]">Legal Aid: Scotland (SLAB) and England/Wales (LAA)</h2>
+        <p className="mt-4 max-w-3xl text-[#4B5168] leading-relaxed">{LEGAL_AID_SCOTLAND_SUMMARY}</p>
+        <p className="mt-4 max-w-3xl text-[#4B5168] leading-relaxed">{LEGAL_AID_ENGLAND_WALES_SUMMARY}</p>
+        <p className="mt-8 text-[#4B5168]">
           Questions about instructing an expert? See{" "}
-          <Link href="/what-is-a-somalia-expert-witness" className="font-semibold text-[#7A3048] hover:underline">
+          <Link href="/what-is-a-somalia-expert-witness" className="font-semibold text-[#29324D] hover:underline">
             what a Somalia expert witness is
           </Link>
           ,{" "}
-          <Link href="/how-to-instruct" className="font-semibold text-[#7A3048] hover:underline">
+          <Link href="/how-to-instruct" className="font-semibold text-[#29324D] hover:underline">
             how to instruct
           </Link>
           , or{" "}
-          <Link href="/contact" className="font-semibold text-[#7A3048] hover:underline">
+          <Link href="/contact" className="font-semibold text-[#29324D] hover:underline">
             contact us
           </Link>
           .
