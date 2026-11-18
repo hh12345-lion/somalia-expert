@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { fitDescription } from "./fit";
 import { SITE_URL, SITE_NAME } from "./constants";
 
 export const META_DESCRIPTION_MAX = 155;
@@ -56,7 +57,7 @@ export function createMetadata({
   follow?: boolean;
 }): Metadata {
   const url = `${SITE_URL}${path}`;
-  const metaDescription = normalizeMetaDescription(description);
+  const metaDescription = fitDescription(normalizeMetaDescription(description));
   const pageTitle = normalizePageTitle(title);
   const fullTitle = renderPageTitle(title);
   return {

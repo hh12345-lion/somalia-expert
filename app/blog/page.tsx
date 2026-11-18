@@ -8,7 +8,7 @@ import { SITE_NAME, SITE_URL } from "@/lib/constants";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata = createMetadata({
-  title: "Blog | Somalia Expert",
+  title: "Somalia Asylum Evidence Blog",
   description:
     "Articles for solicitors on Somalia expert reports, CPIN gaps, case-specific country evidence, and instructing a Somalia country expert.",
   path: "/blog",

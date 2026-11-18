@@ -3,7 +3,7 @@ import { PageShell } from "@/components/layout/PageShell";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata = createMetadata({
-  title: "Terms of Use",
+  title: "Website Terms of Use",
   description:
     "Terms for using Somalia Expert: UK-only expert witness matching for immigration solicitors in FTT and UT proceedings, service scope, no legal advice, and acceptable use.",
   path: "/terms",

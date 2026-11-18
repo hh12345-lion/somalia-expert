@@ -5,7 +5,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CTASection } from "@/components/ui/CTASection";
 import { PageJsonLd } from "@/components/seo/PageJsonLd";
-import { getBlogBySlug } from "@/lib/blog";
+import { getBlogBySlug, getAllBlogPosts } from "@/lib/blog";
 import { SITE_NAME, SITE_URL } from "@/lib/constants";
 import { markdownToHtml } from "@/lib/markdown";
 import { createMetadata } from "@/lib/metadata";
@@ -49,6 +49,10 @@ export default async function BlogPostPage({ params }: Props) {
   const { slug } = await params;
   const post = getBlogBySlug(slug);
   if (!post) notFound();
+  // Cross-link posts so each has more than one internal link (previously only from /blog).
+  const morePosts = getAllBlogPosts()
+    .filter((p) => p.slug !== post.slug)
+    .slice(0, 3);
 
   const html = markdownToHtml(post.content);
   const url = `${SITE_URL}/blog/${post.slug}`;
@@ -101,6 +105,23 @@ export default async function BlogPostPage({ params }: Props) {
           <span>{post.readingTime}</span>
         </p>
         <div className="mt-10" dangerouslySetInnerHTML={{ __html: html }} />
+
+        {morePosts.length > 0 ? (
+          <nav aria-labelledby="more-from-blog" className="mt-12">
+            <h2 id="more-from-blog" className="text-lg font-semibold">
+              More from the blog
+            </h2>
+            <ul className="mt-4 space-y-3">
+              {morePosts.map((p) => (
+                <li key={p.slug}>
+                  <Link href={`/blog/${p.slug}`} className="font-semibold text-[#29324D] hover:text-[#1C2338]">
+                    {p.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        ) : null}
 
         <p className="not-prose mt-12 border-t border-[#C6CCDC] pt-8 text-sm">
           <Link href="/blog" className="font-semibold text-[#29324D] hover:text-[#1C2338]">
